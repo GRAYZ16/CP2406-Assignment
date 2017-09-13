@@ -4,7 +4,7 @@ import com.gray.math.Vector2d;
 
 public class Entity
 {
-	//Direction Constants, direction is defined 0 - 4 clockwise from UP position
+	//Direction Constants, direction is defined 0 - 3 clockwise from UP position
 	public final int LEFT = -1;
 	public final int RIGHT = 1;
 
@@ -29,6 +29,13 @@ public class Entity
 	//Turn
 	public void turn(int direction)
 	{
+		if(direction == LEFT)
+			if(this.direction == 0)
+				this.direction = 3;
+			else
+				this.direction--;
+		else if(direction == RIGHT)
+			this.direction = (this.direction + 1) % 4;
 
 	}
 
