@@ -1,18 +1,14 @@
 package com.gray.main;
 
 import com.gray.game.Game;
-import com.gray.game.Player;
 import com.gray.net.NetworkHandler;
 import com.gray.net.PacketProtocol;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.logging.Logger;
 
 public class Main
 {
-	public static final int PLAYER_SIZE = 20;
-	static Logger logger;
+	public static Logger logger;
 
 	public static void main(String[] args)
 	{
@@ -21,16 +17,18 @@ public class Main
 		logger.info("Starting Light Cycles Server");
 		
 		PacketProtocol protocol = new PacketProtocol(25535, "230.1.1.1");
-		NetworkHandler network = new NetworkHandler(PLAYER_SIZE);
+		NetworkHandler network = new NetworkHandler();
 
-		game.addPlayer(10,10);
-		game.addPlayer(100,100);
+		game.addPlayer(10,10, "Josh");
+		game.addPlayer(100,100, "Sara");
 
 		byte[] data = protocol.packPlayerData(game.getPlayers());
 		network.sendPacket(protocol.generatePacket(data));
-		System.out.println(network.receivePacket());
 
-
+		while(true)
+		{
+			System.out.println(network.receivePacket());
+		}
 	}
 
 }

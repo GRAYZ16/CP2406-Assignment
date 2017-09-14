@@ -3,21 +3,19 @@ package com.gray.net;
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
-public class NetworkHandler implements Runnable
+public class NetworkHandler
 {
 	private DatagramSocket udpSocket;
-	private ExecutorService executorService;
 
-	public NetworkHandler(int poolSize)
+	public NetworkHandler()
 	{
 		try
 		{
 			udpSocket = new DatagramSocket();
-			executorService = Executors.newFixedThreadPool(poolSize);
-		}catch(IOException e)
+
+		}
+		catch(IOException e)
 		{
 			System.out.println("Exception In creating socket: " + e.getMessage());
 		}
@@ -54,21 +52,5 @@ public class NetworkHandler implements Runnable
 	public void closeSocket()
 	{
 		udpSocket.close();
-	}
-
-	@Override
-	public void run()
-	{
-		try
-		{
-			while(true)
-			{
-				executorService.execute(new PacketHandler(udpSocket));
-			}
-		}
-		catch(Exception e)
-		{
-
-		}
 	}
 }

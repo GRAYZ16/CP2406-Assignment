@@ -1,15 +1,17 @@
 package com.gray.net;
 
-import com.gray.game.Player;
+import com.gray.entity.Player;
+import com.gray.main.Main;
 
 import java.io.IOException;
 import java.net.InetAddress;
-import java.util.List;
 import java.net.DatagramPacket;
+import java.util.HashMap;
+import java.util.Map;
 
 public class PacketProtocol
 {
-	private final String DATA_FORMAT = "%d,%d,%d ";
+	private final String DATA_FORMAT = "%s,%f,%f ";
 	private int multicastPort;
 	private String multicastIP;
 
@@ -19,13 +21,13 @@ public class PacketProtocol
 			this.multicastIP = serverIP;
 	}
 
-	public byte[] packPlayerData(List<Player> data)
+	public byte[] packPlayerData(HashMap<String, Player> data)
 	{
 		String packetData = "";
 
-		for(Player player: data)
+		for(Map.Entry<String, Player> player: data.entrySet())
 		{
-			packetData = packetData.concat(String.format(DATA_FORMAT, player.getId(), player.getX(), player.getY()));
+			packetData = packetData.concat(String.format(DATA_FORMAT, player.getKey(), player.getValue().getPos().getX(), player.getValue().getPos().getY()));
 		}
 		return packetData.getBytes();
 	}
@@ -44,5 +46,38 @@ public class PacketProtocol
 			System.out.println("Error in generating packet: " + e.getMessage());
 		}
 		return packet;
+	}
+
+	public void receive_data(String payload)
+	{
+		String data[] = payload.split(" ");
+
+		switch(data[0])
+		{
+			case "USER":
+				switch(data[2])
+				{
+					case "TURN":
+
+						break;
+					case "GO":
+
+						break;
+					case "JETWALL":
+
+						break;
+				}
+				break;
+			case "ADD":
+				break;
+			case "REMOVE":
+				break;
+			case "GRID":
+				break;
+			case "SAVE":
+				break;
+			default:
+				Main.logger.info("Incorrect Message Received: " + payload);
+		}
 	}
 }
