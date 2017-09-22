@@ -11,14 +11,15 @@ import java.util.Map;
 
 public class PacketProtocol
 {
-	private final String DATA_FORMAT = "%s,%f,%f ";
+	private final String DATA_FORMAT;
 	private int multicastPort;
 	private String multicastIP;
 
 	public PacketProtocol(int port, String serverIP)
 	{
-			this.multicastPort = port;
-			this.multicastIP = serverIP;
+		this.multicastPort = port;
+		this.multicastIP = serverIP;
+		DATA_FORMAT = "%s,%f,%f ";
 	}
 
 	public byte[] packPlayerData(HashMap<String, Player> data)
@@ -48,7 +49,7 @@ public class PacketProtocol
 		return packet;
 	}
 
-	public void receive_data(String payload)
+	public void receiveRequest(String payload)
 	{
 		String data[] = payload.split(" ");
 
@@ -58,7 +59,7 @@ public class PacketProtocol
 				switch(data[2])
 				{
 					case "TURN":
-
+						Main.logger.info("TURN COMMAND");
 						break;
 					case "GO":
 

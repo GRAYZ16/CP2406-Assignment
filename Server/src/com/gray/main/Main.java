@@ -27,8 +27,12 @@ public class Main
 
 		while(true)
 		{
-			System.out.println(network.receivePacket());
+			protocol.receiveRequest(network.receivePacket());
 		}
 	}
 
+	public void run()
+	{
+
+	}
 }
