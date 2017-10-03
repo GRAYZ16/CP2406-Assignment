@@ -24,4 +24,9 @@ public class Player extends Entity
 
 		this.setVel(new Vector2d(0,0));
 	}
+
+	public boolean isLightWall()
+	{
+		return isLightWall;
+	}
 }
