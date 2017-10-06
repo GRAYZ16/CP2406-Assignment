@@ -17,23 +17,26 @@ public class ClientTest
 		System.out.println("Server at: " + mcSocket.getLocalSocketAddress());
 		mcSocket.joinGroup(mcIPAddress);
 
-		DatagramPacket packet = new DatagramPacket(new byte[1024], 1024);
+		while(true)
+		{
+			DatagramPacket packet = new DatagramPacket(new byte[1024], 1024);
 
-		System.out.println("Waiting for msg...");
-		mcSocket.receive(packet);
+			System.out.println("Waiting for msg...");
+			mcSocket.receive(packet);
 
-		String msg = new String(packet.getData(), packet.getOffset(), packet.getLength());
+			String msg = new String(packet.getData(), packet.getOffset(), packet.getLength());
 
-		System.out.println("Received: " + msg);
+			System.out.println("Received: " + msg);
+		}
 
-		String command = "USER Josh TURN";
+		/*String command = "USER Josh TURN";
 
 		DatagramPacket send = new DatagramPacket(command.getBytes(), command.length());
 		send.setPort(packet.getPort());
 		send.setAddress(packet.getAddress());
-		mcSocket.send(send);
+		mcSocket.send(send);*/
 
-		mcSocket.leaveGroup(mcIPAddress);
-		mcSocket.close();
+		//mcSocket.leaveGroup(mcIPAddress);
+		//mcSocket.close();
 	}
 }

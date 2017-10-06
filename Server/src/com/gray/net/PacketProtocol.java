@@ -1,6 +1,6 @@
 package com.gray.net;
 
-import com.gray.entity.Player;
+import com.gray.lightcycleslogic.entity.Player;
 import com.gray.main.Main;
 
 import java.io.IOException;

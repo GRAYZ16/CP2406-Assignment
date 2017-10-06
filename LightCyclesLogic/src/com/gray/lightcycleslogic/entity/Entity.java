@@ -1,6 +1,6 @@
-package com.gray.entity;
+package com.gray.lightcycleslogic.entity;
 
-import com.gray.math.Vector2d;
+import com.gray.lightcycleslogic.math.Vector2d;
 
 public class Entity
 {

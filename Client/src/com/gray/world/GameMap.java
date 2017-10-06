@@ -1,6 +1,6 @@
 package com.gray.world;
 
-import com.gray.entity.Player;
+import com.gray.lightcycleslogic.entity.Player;
 
 import java.util.ArrayList;
 

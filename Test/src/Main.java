@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main
 {
 	public static void main(String[] args)
@@ -21,5 +23,18 @@ public class Main
 		int i = 3;
 		i = (i + 1) % 4;
 		System.out.println(i);
+
+		String test = "1234";
+
+		String[] split = test.split(",");
+		for(String section : split)
+		{
+			System.out.println(section);
+		}
+
+		Scanner scanner = new Scanner(System.in);
+		System.out.print(scanner.nextLine());
+		System.out.println("Hello2");
+
 	}
 }

@@ -1,16 +1,14 @@
-package com.gray.entity;
+package com.gray.lightcycleslogic.entity;
 
-import com.gray.math.Vector2d;
+import com.gray.lightcycleslogic.math.Vector2d;
 
 public class Player extends Entity
 {
 	private boolean isLightWall;
-	private float colour[];
 
-	public Player(Vector2d pos, Vector2d vel, float[] colour)
+	public Player(Vector2d pos, Vector2d vel)
 	{
 		super(pos, vel);
-		this.colour = colour;
 		isLightWall = true;
 	}
 
@@ -27,7 +25,7 @@ public class Player extends Entity
 		this.setVel(new Vector2d(0,0));
 	}
 
-	private boolean isLightWall()
+	public boolean isLightWall()
 	{
 		return isLightWall;
 	}

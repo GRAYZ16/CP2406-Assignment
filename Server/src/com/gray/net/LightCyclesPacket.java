@@ -1,6 +1,6 @@
 package com.gray.net;
 
-import com.gray.entity.Player;
+import com.gray.lightcycleslogic.entity.Player;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
@@ -11,18 +11,13 @@ import java.util.Map;
 public class LightCyclesPacket
 {
 	private final String DATA_FORMAT;
-	private int multicastPort;
-	private String multicastIP;
 
 	private DatagramPacket packet;
 
 
-	public LightCyclesPacket(int port, String IP)
+	public LightCyclesPacket()
 	{
-		this.multicastPort = port;
-		this.multicastIP = IP;
 		DATA_FORMAT = "%s,%f,%f,%b ";
-
 	}
 
 	public void packPlayerData(HashMap<String, Player> data)
@@ -38,16 +33,6 @@ public class LightCyclesPacket
 
 	public DatagramPacket getPacket()
 	{
-		try
-		{
-			packet.setAddress(InetAddress.getByName(multicastIP));
-			packet.setPort(multicastPort);
-		}
-		catch(IOException e)
-		{
-			System.out.println("Error in generating packet: " + e.getMessage());
-		}
-
 		return packet;
 	}
 }

@@ -1,4 +1,4 @@
-package com.gray.math;
+package com.gray.lightcycleslogic.math;
 
 public class Vector2d
 {
