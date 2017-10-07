@@ -1,5 +1,6 @@
 package com.gray.net;
 
+import com.gray.lightcycleslogic.net.Network;
 import com.gray.main.Main;
 
 import java.io.IOException;

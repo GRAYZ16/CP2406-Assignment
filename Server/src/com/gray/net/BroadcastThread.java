@@ -1,5 +1,6 @@
 package com.gray.net;
 
+import com.gray.lightcycleslogic.net.LightCyclesPacket;
 import com.gray.main.Main;
 
 import java.net.DatagramPacket;
@@ -25,8 +26,7 @@ public class BroadcastThread implements Runnable
 				}
 
 
-				LightCyclesPacket packet = new LightCyclesPacket();
-				packet.packPlayerData(Main.game.getPlayers());
+				LightCyclesPacket packet = new LightCyclesPacket(Main.game.getPlayers());
 				Server.network.sendBroadcast(packet.getPacket());
 				Thread.sleep(100);
 			}

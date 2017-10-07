@@ -1,22 +1,18 @@
 package com.gray.main;
 
 import com.gray.game.Game;
-import com.gray.net.LightCyclesPacket;
-import com.gray.net.Network;
-import com.gray.net.PacketProtocol;
+import com.gray.lightcycleslogic.Util.LightCyclesLogger;
 import com.gray.net.Server;
-
-import java.util.logging.Logger;
 
 public class Main
 {
-	public static Logger logger;
+	public static LightCyclesLogger logger;
 	public static Game game;
 
 	public static void main(String[] args)
 	{
 		game = new Game();
-		logger = Logger.getLogger("ServerLogger");
+		logger = new LightCyclesLogger();
 		logger.info("Starting Light Cycles Server");
 
 		game.addPlayer(10,10, "Josh");

@@ -1,3 +1,5 @@
+package com.gray.lightcycleslogic.net;
+
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
@@ -27,6 +29,7 @@ public class Network
 		}
 		catch(IOException e)
 		{
+			//main.logger.severe("Exception In creating socket: " + e.getMessage());
 		}
 	}
 
@@ -43,6 +46,7 @@ public class Network
 		}
 		catch(IOException e)
 		{
+			//main.logger.severe("Could not send packet: " + e.getMessage());
 		}
 	}
 
@@ -56,6 +60,7 @@ public class Network
 		}
 		catch(IOException e)
 		{
+			//main.logger.severe("Could not receive packet: " + e.getMessage());
 		}
 
 		return packet;
@@ -72,6 +77,7 @@ public class Network
 		}
 		catch(IOException e)
 		{
+			//main.logger.severe("Error in Broadcasting: " + e.getMessage());
 		}
 	}
 
@@ -85,6 +91,7 @@ public class Network
 		}
 		catch(IOException e)
 		{
+			//main.logger.severe("Could not receive packet: " + e.getMessage());
 		}
 
 		return packet;

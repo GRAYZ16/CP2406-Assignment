@@ -1,8 +1,9 @@
 import java.io.IOException;
 import java.net.DatagramPacket;
-import java.net.InetAddress;
-import java.net.MulticastSocket;
 import java.util.Scanner;
+
+
+import com.gray.lightcycleslogic.net.Network;
 
 public class ClientSendTest
 {
