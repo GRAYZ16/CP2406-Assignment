@@ -27,6 +27,7 @@ public class GameWindow extends JPanel
 		g2d.drawString("FPS: " + GameThread.lastFPS, 0, 100);
 		g2d.translate((Util.WINDOW_WIDTH - (Util.TILE_SIZE * Util.BOARD_SIZE))/2, 0);
 		Main.tiles.draw(g);
+		g2d.fillOval((int)Main.game.getPlayer("Josh").getPos().getX(), (int)Main.game.getPlayer("Josh").getPos().getY(), 32, 32);
 
 		Toolkit.getDefaultToolkit().sync();
 		g2d.dispose();

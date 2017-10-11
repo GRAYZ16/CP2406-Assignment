@@ -1,5 +1,7 @@
 package com.gray.main;
 
+import com.gray.net.ServerIOThread;
+
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -19,6 +21,8 @@ public class Input implements KeyListener
         {
             case KeyEvent.VK_UP:
                 System.out.println("UP");
+                (new Thread(new ServerIOThread("ADD"))).start();
+
                 break;
             case KeyEvent.VK_DOWN:
                 System.out.println("DOWN");

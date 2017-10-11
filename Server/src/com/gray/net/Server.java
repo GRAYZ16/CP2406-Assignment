@@ -44,11 +44,24 @@ public class Server
 	{
 		(new Thread(new BroadcastThread())).start();
 
+		int counter = 0;
+
 		while(true)
 		{
 			Main.logger.info("WAITING");
 			DatagramPacket packet = network.receivePacket();
 			(new Thread(new ClientThread(packet))).start();
+
+			counter++;
+			Main.game.setPlayerStatus("Josh", (float)(50 + 20*Math.sin(Math.toRadians(counter))), 50, false);
+			try
+			{
+				Thread.sleep(10);
+			}
+			catch (Exception e)
+			{
+
+			}
 		}
 	}
 

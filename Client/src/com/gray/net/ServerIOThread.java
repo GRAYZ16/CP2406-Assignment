@@ -8,7 +8,6 @@ import java.net.UnknownHostException;
 
 public class ServerIOThread implements Runnable
 {
-    DatagramPacket packet;
     String msg;
     public ServerIOThread(String msg)
     {
