@@ -24,10 +24,9 @@ public class GameWindow extends JPanel
 		setBackground(Color.MAGENTA);
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setColor(Color.BLACK);
-		g2d.drawString("FPS: " + Main.lastFPS,100,100);
-		counter ++;
-		g2d.fillRect(300, (int)(300 + 100 * Math.sin(Math.toRadians(counter))), 50, 50);
-
+		g2d.drawString("FPS: " + GameThread.lastFPS, 0, 100);
+		g2d.translate((Util.WINDOW_WIDTH - (Util.TILE_SIZE * Util.BOARD_SIZE))/2, 0);
+		Main.tiles.draw(g);
 
 		Toolkit.getDefaultToolkit().sync();
 		g2d.dispose();

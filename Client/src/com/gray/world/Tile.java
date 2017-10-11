@@ -14,11 +14,14 @@ public class Tile
 		isLightWall = false;
 	}
 
-	public void draw(Graphics2D graphics)
+	public void setLightWall()
 	{
-		Graphics localg = graphics.create();
-		localg.setColor(color);
-		localg.drawRect(32,32));
+		isLightWall = true;
+	}
+
+	public boolean isLightWall()
+	{
+		return isLightWall;
 	}
 
 }
