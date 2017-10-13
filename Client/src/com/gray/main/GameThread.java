@@ -52,7 +52,7 @@ public class GameThread implements Runnable
 
             //update physics and redraw
             frame.repaint();
-            Main.tiles.update();
+            Main.game.getTiles().update();
 
             try
             {

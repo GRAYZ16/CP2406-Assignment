@@ -19,9 +19,22 @@ public class Player extends Entity
 		this.isLightWall = isLightWall;
 	}
 
+	public void update()
+	{
+		double newXPos = getPos().getX() + getVel().getX();
+		double newYPos = getPos().getY() + getVel().getY();
+
+		setPos(new Vector2d(newXPos, newYPos));
+
+		if(isDead())
+		{
+			onDeath();
+		}
+	}
+
 	public boolean isDead()
 	{
-		//COLLISION DETECTION
+
 		return false;
 	}
 

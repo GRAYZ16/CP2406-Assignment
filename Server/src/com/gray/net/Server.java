@@ -37,23 +37,20 @@ public class Server
 			Main.logger.severe("Unable to retreive server details");
 		}
 
-		run();
 	}
 
-	private void run()
+	public void run()
 	{
+		(new Thread(new ReceiveThread())).start();
 		(new Thread(new BroadcastThread())).start();
+
 
 		int counter = 0;
 
 		while(true)
 		{
-			Main.logger.info("WAITING");
-			DatagramPacket packet = network.receivePacket();
-			(new Thread(new ClientThread(packet))).start();
-
 			counter++;
-			Main.game.setPlayerStatus("Josh", (float)(50 + 20*Math.sin(Math.toRadians(counter))), 50, false);
+			Main.game.setPlayerStatus("Josh", (float)(20 + 20*Math.sin(Math.toRadians(counter))), 50, false);
 			try
 			{
 				Thread.sleep(10);
@@ -63,6 +60,11 @@ public class Server
 
 			}
 		}
+	}
+
+	public void setState()
+	{
+
 	}
 
 

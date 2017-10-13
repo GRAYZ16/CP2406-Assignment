@@ -1,20 +1,20 @@
 package com.gray.lightcycleslogic.game;
 
+import java.util.HashMap;
 import com.gray.lightcycleslogic.entity.Player;
 import com.gray.lightcycleslogic.math.Vector2d;
-
-import java.util.HashMap;
+import com.gray.lightcycleslogic.world.TileMap;
 
 public class Game
 {
-	public static final float VEL = 1;
-	HashMap<String, Player> players;
-	int playerIndex;
+	private final float VEL = 1;
+	private  HashMap<String, Player> players;
+	private TileMap tiles;
 
-	public Game()
+	public Game(int boardSize)
 	{
 		players = new HashMap<>();
-		playerIndex = 1;
+		tiles = new TileMap(boardSize);
 	}
 
 	public synchronized void addPlayer(int x, int y, String name)
@@ -37,11 +37,32 @@ public class Game
 		this.players = players;
 	}
 
-	public synchronized void setPlayerStatus(String name, float x, float y, boolean isLightWall)
+	public synchronized void update()
+	{
+		for(Player player : players.values()) {
+			player.update();
+			checkDeath(player);
+		}
+	}
+
+	public synchronized void checkDeath(Player player)
+	{
+		Vector2d playerPos = player.getPos();
+
+
+	}
+
+	public synchronized TileMap getTiles()
+	{
+		return tiles;
+	}
+
+	public synchronized void setPlayerStatus(String name, float x, float y, boolean isJetWall)
 	{
 		Player player = players.get(name);
 		player.setPos(new Vector2d(x, y));
-		player.setLightWall(isLightWall);
+		//TODO : Jetwall code
+		//player.isJetWall();
 		players.put(name, player);
 	}
 }

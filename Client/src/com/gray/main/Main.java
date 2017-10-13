@@ -5,16 +5,17 @@ import com.gray.lightcycleslogic.entity.Player;
 import com.gray.lightcycleslogic.game.Game;
 import com.gray.lightcycleslogic.math.Vector2d;
 import com.gray.net.ClientNetwork;
-import com.gray.world.TileMap;
+import com.gray.lightcycleslogic.world.TileMap;
 
 import javax.swing.*;
 import java.awt.event.KeyListener;
-import java.util.Map;
 
 public class Main
 {
 	public static Game game;
 	public static JFrame frame;
+
+	public static Player player;
 
 	public static Vector2d windowSize;
 
@@ -22,8 +23,8 @@ public class Main
 
 	public static void main(String[] args)
 	{
-		game = new Game();
-		tiles = new TileMap();
+		game = new Game(Util.BOARD_SIZE);
+		player = new Player(new Vector2d(10,10), new Vector2d(1, 1));
 
 		ClientNetwork network = new ClientNetwork();
 		network.run();

@@ -1,4 +1,4 @@
-package com.gray.world;
+package com.gray.lightcycleslogic.world;
 
 import java.awt.*;
 
