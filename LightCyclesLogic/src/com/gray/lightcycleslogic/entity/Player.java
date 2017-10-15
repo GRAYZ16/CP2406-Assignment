@@ -2,6 +2,8 @@ package com.gray.lightcycleslogic.entity;
 
 import com.gray.lightcycleslogic.math.Vector2d;
 
+import java.awt.*;
+
 public class Player extends Entity
 {
 	private boolean isLightWall;
@@ -19,32 +21,6 @@ public class Player extends Entity
 		this.isLightWall = isLightWall;
 	}
 
-	public void update()
-	{
-		double newXPos = getPos().getX() + getVel().getX();
-		double newYPos = getPos().getY() + getVel().getY();
-
-		setPos(new Vector2d(newXPos, newYPos));
-
-		if(isDead())
-		{
-			onDeath();
-		}
-	}
-
-	public boolean isDead()
-	{
-
-		return false;
-	}
-
-	private void onDeath()
-	{
-		//Death Animation
-
-		this.setVel(new Vector2d(0,0));
-	}
-
 	public boolean isLightWall()
 	{
 		return isLightWall;
@@ -54,4 +30,5 @@ public class Player extends Entity
 	{
 		this.isLightWall = isLightWall;
 	}
+
 }

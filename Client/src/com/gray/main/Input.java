@@ -1,5 +1,7 @@
 package com.gray.main;
 
+import com.gray.lightcycleslogic.entity.Entity;
+import com.gray.lightcycleslogic.entity.Player;
 import com.gray.net.ServerIOThread;
 
 import java.awt.event.KeyEvent;
@@ -29,9 +31,11 @@ public class Input implements KeyListener
                 break;
             case KeyEvent.VK_LEFT:
                 System.out.println("LEFT");
+                Main.player.turn(Player.LEFT);
                 break;
             case KeyEvent.VK_RIGHT:
                 System.out.println("RIGHT");
+                Main.player.turn(Player.RIGHT);
                 break;
         }
     }

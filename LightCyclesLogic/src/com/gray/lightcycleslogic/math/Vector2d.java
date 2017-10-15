@@ -11,16 +11,26 @@ public class Vector2d
 		this.y = y;
 	}
 
-	public void add(Vector2d vector)
+	public Vector2d add(Vector2d vector)
 	{
-		this.x += vector.getX();
-		this.y += vector.getY();
+		Vector2d vec = new Vector2d(0,0);
+
+		vec.set(x + vector.getX(), y + vector.getY());
+
+		return vec;
 	}
 
-	public void scale(double scale)
+	public Vector2d mul(Vector2d vector)
 	{
-		this.x = x * scale;
-		this.y = y * scale;
+		Vector2d vec = new Vector2d(0,0);
+		vec.set(x * vector.getX(), y * vector.getY());
+
+		return vec;
+	}
+
+	public Vector2d scale(double scale)
+	{
+		return new Vector2d(x * scale, y * scale);
 	}
 
 	public void set(double x, double y)

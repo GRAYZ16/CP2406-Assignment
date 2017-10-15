@@ -5,19 +5,26 @@ import com.gray.lightcycleslogic.math.Vector2d;
 public class Entity
 {
 	//Direction Constants, direction is defined 0 - 3 clockwise from UP position
-	public final int LEFT = -1;
-	public final int RIGHT = 1;
+	public static final int LEFT = -1;
+	public static final int RIGHT = 1;
+
+	public static final int DIR_UP = 0;
+	public static final int DIR_LEFT = 1;
+	public static final int DIR_DOWN = 2;
+	public static final int DIR_RIGHT = 3;
 
 	private Vector2d pos;
 	private  Vector2d vel;
 
+	private Vector2d dir;
 	private int direction;
 
 	public Entity(Vector2d pos, Vector2d vel)
 	{
 		this.pos = pos;
 		this.vel = vel;
-		direction = 0;
+		this.dir = new Vector2d(1,0);
+		direction = 1;
 	}
 
 	public Entity(double xPos, double yPos, double xVel, double yVel)
@@ -30,13 +37,78 @@ public class Entity
 	public void turn(int direction)
 	{
 		if(direction == LEFT)
-			if(this.direction == 0)
-				this.direction = 3;
-			else
-				this.direction--;
+		{
+			if(this.direction == DIR_UP)
+			{
+				setDir(DIR_RIGHT);
+			}else
+			{
+				setDir(this.direction - 1);
+			}
+		}
 		else if(direction == RIGHT)
-			this.direction = (this.direction + 1) % 4;
+		{
+			setDir((this.direction + 1) % 4);
+		}
+	}
 
+	public void setDir(int dir)
+	{
+		this.direction = dir;
+
+		switch(dir)
+		{
+			case DIR_UP:
+				this.dir = new Vector2d(0,1);
+				break;
+			case DIR_DOWN:
+				this.dir = new Vector2d(0, -1);
+				break;
+			case DIR_LEFT:
+				this.dir = new Vector2d(-1, 0);
+				break;
+			case DIR_RIGHT:
+				this.dir = new Vector2d(1, 0);
+				break;
+		}
+		System.out.println(this.dir.getX());
+
+	}
+
+	public void update(double delta)
+	{
+		Vector2d newPos = getPos().add(getVel().scale(delta).mul(dir));
+
+
+		setPos(newPos);
+
+		if(isDead())
+		{
+			onDeath();
+		}
+	}
+
+	public boolean isDead()
+	{
+
+		return false;
+	}
+
+	private void onDeath()
+	{
+		//Death Animation
+
+		this.setVel(new Vector2d(0,0));
+	}
+
+	public int getDir()
+	{
+		return direction;
+	}
+
+	public Vector2d getVecDir()
+	{
+		return dir;
 	}
 
 	public Vector2d getPos()

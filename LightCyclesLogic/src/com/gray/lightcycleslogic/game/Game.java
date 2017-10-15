@@ -7,7 +7,7 @@ import com.gray.lightcycleslogic.world.TileMap;
 
 public class Game
 {
-	private final float VEL = 1;
+	private final float VEL = 5;
 	private  HashMap<String, Player> players;
 	private TileMap tiles;
 
@@ -37,10 +37,10 @@ public class Game
 		this.players = players;
 	}
 
-	public synchronized void update()
+	public synchronized void update(double delta)
 	{
 		for(Player player : players.values()) {
-			player.update();
+			player.update(delta);
 			checkDeath(player);
 		}
 	}

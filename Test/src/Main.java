@@ -35,6 +35,7 @@ public class Main
 		Scanner scanner = new Scanner(System.in);
 		System.out.print(scanner.nextLine());
 		System.out.println("Hello2");
+		System.out.println(0 % 2);
 
 	}
 }

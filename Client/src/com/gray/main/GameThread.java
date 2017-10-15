@@ -53,7 +53,7 @@ public class GameThread implements Runnable
             //update physics and redraw
             frame.repaint();
             Main.game.getTiles().update();
-
+            Main.player.update(delta);
             try
             {
                 Thread.sleep((lastTime - System.nanoTime() + TARGET_TIME)/1000000);

@@ -25,7 +25,7 @@ public class Main
 	{
 		game = new Game(Util.BOARD_SIZE);
 		player = new Player(new Vector2d(10,10), new Vector2d(1, 1));
-
+		player.setDir(Player.DIR_RIGHT);
 		ClientNetwork network = new ClientNetwork();
 		network.run();
 
