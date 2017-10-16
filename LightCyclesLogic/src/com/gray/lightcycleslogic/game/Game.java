@@ -8,6 +8,7 @@ import com.gray.lightcycleslogic.world.TileMap;
 public class Game
 {
 	private final float VEL = 5;
+	private int boardSize;
 	private  HashMap<String, Player> players;
 	private TileMap tiles;
 
@@ -15,6 +16,7 @@ public class Game
 	{
 		players = new HashMap<>();
 		tiles = new TileMap(boardSize);
+		this.boardSize = boardSize;
 	}
 
 	public synchronized void addPlayer(int x, int y, String name)
@@ -50,6 +52,18 @@ public class Game
 	public synchronized void checkDeath(Player player)
 	{
 		Vector2d playerPos = player.getPos();
+
+		if(player.nextPos().getX() > boardSize || player.nextPos().getX() < 0 || player.nextPos().getY() > boardSize || player.nextPos().getY() < 0)
+		{
+			if(!player.isDead())
+			{
+				player.kill();
+			}
+		}
+		else if(tiles.getTile((int)Math.floor(player.nextPos().getX()), (int)Math.floor(player.nextPos().getY())).isLightWall())
+		{
+			player.kill();
+		}
 
 
 	}

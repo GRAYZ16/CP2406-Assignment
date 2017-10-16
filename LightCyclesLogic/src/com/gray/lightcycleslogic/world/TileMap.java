@@ -36,6 +36,11 @@ public class TileMap
 		tiles[x][y].setLightWall();
 	}
 
+	public Tile getTile(int x, int y)
+	{
+		return tiles[x][y];
+	}
+
 	public void draw(Graphics g, int tileSize)
 	{
 		Graphics2D localGraphics = (Graphics2D)g.create();

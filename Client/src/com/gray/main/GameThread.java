@@ -59,8 +59,12 @@ public class GameThread implements Runnable
 
             Main.player.update(delta);
 
-            Main.game.setTile((int)Math.round(lastPos.getX()), (int)Math.round(lastPos.getY()));
+			Main.game.checkDeath(Main.player);
 
+            if(!Main.player.isDead())
+			{
+				Main.game.setTile((int)Math.round(lastPos.getX()), (int)Math.round(lastPos.getY()));
+			}
 
 
 

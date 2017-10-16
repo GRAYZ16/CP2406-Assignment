@@ -16,6 +16,8 @@ public class Entity
 	private Vector2d pos;
 	private  Vector2d vel;
 
+	private boolean isDead;
+
 	private Vector2d dir;
 	private int direction;
 
@@ -25,6 +27,7 @@ public class Entity
 		this.vel = vel;
 		this.dir = new Vector2d(1,0);
 		direction = 1;
+		isDead = false;
 	}
 
 	public Entity(double xPos, double yPos, double xVel, double yVel)
@@ -106,10 +109,20 @@ public class Entity
 		}
 	}
 
+	public Vector2d nextPos()
+	{
+		return getPos().add(getVel().mul(dir).scale(2));
+	}
+
 	public boolean isDead()
 	{
 
-		return false;
+		return isDead;
+	}
+
+	public void kill()
+	{
+		isDead = true;
 	}
 
 	private void onDeath()
