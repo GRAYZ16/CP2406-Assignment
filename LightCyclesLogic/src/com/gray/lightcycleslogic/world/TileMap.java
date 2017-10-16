@@ -28,9 +28,12 @@ public class TileMap
 
 	public void update()
 	{
-		counter++;
-		if(counter < 200)
-			tiles[counter][counter].setLightWall();
+
+	}
+
+	public void setTile(int x, int y)
+	{
+		tiles[x][y].setLightWall();
 	}
 
 	public void draw(Graphics g, int tileSize)
@@ -41,9 +44,9 @@ public class TileMap
 			for(int j = 0; j < boardSize; j++)
 			{
 				if(tiles[i][j].isLightWall())
-					localGraphics.setColor(Color.BLACK);
+					localGraphics.setColor(new Color(0,191,255));
 				else
-					localGraphics.setColor(Color.YELLOW);
+					localGraphics.setColor(Color.GRAY);
 
 				localGraphics.fillRect(i * tileSize, j * tileSize, tileSize, tileSize);
 			}

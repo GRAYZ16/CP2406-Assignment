@@ -54,25 +54,43 @@ public class Entity
 
 	public void setDir(int dir)
 	{
-		this.direction = dir;
-
 		switch(dir)
 		{
 			case DIR_UP:
+				if(this.direction == 1)
+					setPos(new Vector2d(Math.ceil(getPos().getX()), getPos().getY()));
+				else
+					setPos(new Vector2d(Math.floor(getPos().getX()), getPos().getY()));
+
 				this.dir = new Vector2d(0,1);
 				break;
 			case DIR_DOWN:
+				if(this.direction == 1)
+					setPos(new Vector2d(Math.ceil(getPos().getX()), getPos().getY()));
+				else
+					setPos(new Vector2d(Math.floor(getPos().getX()), getPos().getY()));
+
 				this.dir = new Vector2d(0, -1);
 				break;
 			case DIR_LEFT:
+				if(this.direction == 0)
+					setPos(new Vector2d(getPos().getX(), Math.ceil(getPos().getY())));
+				else
+					setPos(new Vector2d(getPos().getX(), Math.floor(getPos().getY())));
+
 				this.dir = new Vector2d(-1, 0);
 				break;
 			case DIR_RIGHT:
+				if(this.direction == 0)
+					setPos(new Vector2d(getPos().getX(), Math.ceil(getPos().getY())));
+				else
+					setPos(new Vector2d(getPos().getX(), Math.floor(getPos().getY())));
+
 				this.dir = new Vector2d(1, 0);
 				break;
 		}
-		System.out.println(this.dir.getX());
 
+		this.direction = dir;
 	}
 
 	public void update(double delta)

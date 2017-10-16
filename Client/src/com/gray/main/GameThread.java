@@ -1,6 +1,7 @@
 package com.gray.main;
 
 import com.gray.Util.Util;
+import com.gray.lightcycleslogic.math.Vector2d;
 
 import javax.swing.*;
 
@@ -53,7 +54,16 @@ public class GameThread implements Runnable
             //update physics and redraw
             frame.repaint();
             Main.game.getTiles().update();
+
+            Vector2d lastPos = Main.player.getPos();
+
             Main.player.update(delta);
+
+            Main.game.setTile((int)Math.round(lastPos.getX()), (int)Math.round(lastPos.getY()));
+
+
+
+
             try
             {
                 Thread.sleep((lastTime - System.nanoTime() + TARGET_TIME)/1000000);

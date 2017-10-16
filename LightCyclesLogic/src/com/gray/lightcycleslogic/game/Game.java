@@ -39,6 +39,8 @@ public class Game
 
 	public synchronized void update(double delta)
 	{
+
+		//TODO: Fix
 		for(Player player : players.values()) {
 			player.update(delta);
 			checkDeath(player);
@@ -55,6 +57,11 @@ public class Game
 	public synchronized TileMap getTiles()
 	{
 		return tiles;
+	}
+
+	public synchronized void setTile(int x, int y)
+	{
+		tiles.setTile(x,y);
 	}
 
 	public synchronized void setPlayerStatus(String name, float x, float y, boolean isJetWall)

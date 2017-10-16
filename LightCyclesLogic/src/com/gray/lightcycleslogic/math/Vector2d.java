@@ -58,4 +58,9 @@ public class Vector2d
 	{
 		this.y = y;
 	}
+
+	public boolean equals(Vector2d vector)
+	{
+		return (x == vector.getX() && y == vector.getY());
+	}
 }
