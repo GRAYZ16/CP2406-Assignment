@@ -3,7 +3,7 @@ import java.net.DatagramPacket;
 import java.util.Scanner;
 
 
-import com.gray.lightcycleslogic.net.Network;
+import com.gray.lightcycles.logic.net.Network;
 
 public class ClientSendTest
 {

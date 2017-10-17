@@ -1,6 +1,6 @@
 package com.gray.net;
 
-import com.gray.lightcycleslogic.net.LightCyclesPacket;
+import com.gray.lightcycles.logic.net.LightCyclesPacket;
 import com.gray.main.Main;
 
 import java.net.DatagramPacket;

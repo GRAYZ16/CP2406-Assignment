@@ -1,7 +1,7 @@
 package com.gray.main;
 
-import com.gray.lightcycleslogic.game.Game;
-import com.gray.lightcycleslogic.Util.LightCyclesLogger;
+import com.gray.lightcycles.logic.game.Game;
+import com.gray.lightcycles.logic.Util.LightCyclesLogger;
 import com.gray.net.Server;
 
 public class Main
