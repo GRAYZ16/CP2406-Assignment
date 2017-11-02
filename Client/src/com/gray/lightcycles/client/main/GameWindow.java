@@ -1,6 +1,7 @@
 package com.gray.lightcycles.client.main;
 
 import com.gray.lightcycles.client.Util.Util;
+import com.gray.lightcycles.logic.entity.Player;
 
 import javax.swing.*;
 import java.awt.*;
@@ -29,9 +30,13 @@ public class GameWindow extends JPanel
 
 		Main.renderer.draw(g);
 
-		g2d.setColor(Color.YELLOW);
-		g2d.fillRect((int)Main.game.getPlayer("Josh").getPos().getX() * Util.TILE_SIZE, (int)Main.game.getPlayer("Josh").getPos().getY() * Util.TILE_SIZE, 2 * Util.TILE_SIZE, Util.TILE_SIZE);
-		g2d.drawString("Josh", (int)Main.game.getPlayer("Josh").getPos().getX() * Util.TILE_SIZE + Util.TILE_SIZE, (int)Main.game.getPlayer("Josh").getPos().getY() * Util.TILE_SIZE + Util.TILE_SIZE);
+		g2d.setColor(Color.BLUE);
+
+		for(Player player : Main.game.getPlayers().values())
+		{
+			g2d.fillRect((int)player.getPos().getX() * Util.TILE_SIZE, (int)player.getPos().getY() * Util.TILE_SIZE, 2 * Util.TILE_SIZE, Util.TILE_SIZE);
+		}
+
 
 		Toolkit.getDefaultToolkit().sync();
 		g2d.dispose();

@@ -5,13 +5,8 @@ import com.gray.lightcycles.client.entity.ClientPlayer;
 import com.gray.lightcycles.client.net.ClientNetwork;
 import com.gray.lightcycles.client.net.ServerIOThread;
 import com.gray.lightcycles.client.render.ClientRenderer;
-import com.gray.lightcycles.client.world.ClientTile;
-import com.gray.lightcycles.client.world.ClientTileMap;
 import com.gray.lightcycles.logic.entity.Player;
-import com.gray.lightcycles.logic.game.Game;
 import com.gray.lightcycles.logic.math.Vector2d;
-import com.gray.lightcycles.logic.world.Tile;
-import com.gray.lightcycles.logic.world.TileMap;
 
 import javax.swing.*;
 import java.awt.*;
@@ -24,7 +19,7 @@ public class Main
 
 	public static ClientRenderer renderer;
 
-	public static ClientPlayer player;
+	private static ClientPlayer player;
 	public static String userName;
 
 	public static boolean serverState;
@@ -35,25 +30,25 @@ public class Main
 	{
 		game = new ClientGame(Util.BOARD_SIZE);
 
-		player = new ClientPlayer(new Vector2d(0, 0), new Vector2d(0, 0));
-		player.setColor(new Color(0, 191, 255));
+		setPlayer(new ClientPlayer(new Vector2d(0, 0), new Vector2d(0, 0)));
+		getPlayer().setColor(new Color(0, 191, 255));
 
-		if(player.getPos().getX() < Util.BOARD_SIZE / 2)
+		if(getPlayer().getPos().getX() < Util.BOARD_SIZE / 2)
 		{
-			player.setDir(Player.DIR_LEFT);
+			getPlayer().setDir(Player.DIR_LEFT);
 		}
-		else if(player.getPos().getY() < Util.BOARD_SIZE / 2)
+		else if(getPlayer().getPos().getY() < Util.BOARD_SIZE / 2)
 		{
-			player.setDir(Player.DIR_UP);
+			getPlayer().setDir(Player.DIR_UP);
 		}
 
-		userName = "Evie1";
+		userName = "GRAYZ19281";
 		serverState = false;
 
 		renderer = new ClientRenderer();
 
 		renderer.addObject(game.getTiles());
-		renderer.addObject(player);
+		renderer.addObject(getPlayer());
 
 		ClientNetwork network = new ClientNetwork();
 		network.run();
@@ -73,16 +68,6 @@ public class Main
 
 		KeyListener listener = new Input();
 
-		frame = new JFrame();
-		frame.add(new GameWindow());
-		frame.setSize(Util.WINDOW_WIDTH, Util.WINDOW_HEIGHT);
-		frame.pack();
-		frame.addKeyListener(listener);
-		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		frame.setVisible(true);
-		frame.setFocusable(true);
-		frame.setLocationRelativeTo(null);
-
 		while(!serverState)
 		{
 			try
@@ -95,6 +80,26 @@ public class Main
 				e.printStackTrace();
 			}
 		}
+		frame = new JFrame();
+		frame.add(new GameWindow());
+		frame.setSize(Util.WINDOW_WIDTH, Util.WINDOW_HEIGHT);
+		frame.pack();
+		frame.addKeyListener(listener);
+		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+		frame.setFocusable(true);
+		frame.setLocationRelativeTo(null);
+
 		(new Thread(new GameThread(frame))).start();
+	}
+
+	public synchronized static ClientPlayer getPlayer()
+	{
+		return player;
+	}
+
+	public synchronized static void setPlayer(ClientPlayer player)
+	{
+		Main.player = player;
 	}
 }

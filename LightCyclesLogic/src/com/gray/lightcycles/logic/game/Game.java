@@ -8,7 +8,7 @@ import com.gray.lightcycles.logic.world.TileMap;
 
 public class Game
 {
-	private final float VEL = 0.3f;
+	private final float VEL = 0.4f;
 	private int boardSize;
 	private  HashMap<String, Player> players;
 	private TileMap tiles;

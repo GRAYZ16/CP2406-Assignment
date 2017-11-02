@@ -10,7 +10,7 @@ public class Main
 	public static Game game;
 
 	public static int gridSize = 100;
-	public static final int MAX_PLAYERS = 3;
+	public static final int MAX_PLAYERS = 4;
 
 	public static void main(String[] args)
 	{

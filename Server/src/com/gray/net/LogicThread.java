@@ -23,7 +23,7 @@ public class LogicThread implements Runnable
 		long lastTime = System.nanoTime();
 
 		//The desired time per frame in ns to be able to stabilise at FPS_CAP
-		final long TARGET_TIME = 1000000000 / 60;
+		final long TARGET_TIME = 1000000000 / 20;
 
 		while(isRunning)
 		{

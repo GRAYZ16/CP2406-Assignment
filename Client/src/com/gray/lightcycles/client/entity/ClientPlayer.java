@@ -31,11 +31,11 @@ public class ClientPlayer extends Player implements Renderable
 		Graphics2D g2d = (Graphics2D)g.create();
 		g2d.setColor(this.color);
 
-		double rectX = Main.player.getPos().getX() * Util.TILE_SIZE - Util.TILE_SIZE / 2 -   (Util.TILE_SIZE / 2) * Math.abs(Main.player.getVecDir().getX());
-		double rectY = Main.player.getPos().getY() * Util.TILE_SIZE - Util.TILE_SIZE / 2 -   (Util.TILE_SIZE / 2) * Math.abs(Main.player.getVecDir().getY());
+		double rectX = Main.getPlayer().getPos().getX() * Util.TILE_SIZE - Util.TILE_SIZE / 2 -   (Util.TILE_SIZE / 2) * Math.abs(Main.getPlayer().getVecDir().getX());
+		double rectY = Main.getPlayer().getPos().getY() * Util.TILE_SIZE - Util.TILE_SIZE / 2 -   (Util.TILE_SIZE / 2) * Math.abs(Main.getPlayer().getVecDir().getY());
 
-		double width = 2 * (Util.TILE_SIZE + Math.abs(Main.player.getVecDir().getX()) * Util.TILE_SIZE);
-		double height = 2 * (Util.TILE_SIZE + Math.abs(Main.player.getVecDir().getY()) * Util.TILE_SIZE);
+		double width = 2 * (Util.TILE_SIZE + Math.abs(Main.getPlayer().getVecDir().getX()) * Util.TILE_SIZE);
+		double height = 2 * (Util.TILE_SIZE + Math.abs(Main.getPlayer().getVecDir().getY()) * Util.TILE_SIZE);
 
 
 		g2d.fillRect((int)rectX, (int)rectY, (int)width, (int)height);

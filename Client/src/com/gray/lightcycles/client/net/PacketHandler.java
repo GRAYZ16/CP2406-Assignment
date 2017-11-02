@@ -2,7 +2,6 @@ package com.gray.lightcycles.client.net;
 
 import com.gray.lightcycles.client.main.Main;
 import com.gray.lightcycles.logic.entity.Player;
-import com.gray.lightcycles.logic.math.Vector2d;
 import com.gray.lightcycles.logic.net.LightCyclesPacket;
 
 import java.net.DatagramPacket;
@@ -32,11 +31,11 @@ public class PacketHandler implements  Runnable
 
 				for(Map.Entry<String, Player> entry : players.entrySet())
 				{
-					System.out.println(entry.getKey());
 
 					if(entry.getKey().equals(Main.userName))
 					{
-						Main.player.setPos(entry.getValue().getPos());
+
+						Main.getPlayer().setPos(entry.getValue().getPos());
 					}
 					else
 					{

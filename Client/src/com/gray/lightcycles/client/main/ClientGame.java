@@ -11,15 +11,16 @@ import com.gray.lightcycles.logic.world.TileMap;
 
 public class ClientGame
 {
-	private final float VEL = 0.3f;
+	private final float VEL = 0.4f;
 	private int boardSize;
 	private  HashMap<String, Player> players;
-	//private  HashMap<String, Color> colors;
+	private  HashMap<String, Color> colors;
 	private ClientTileMap tiles;
 
 	public ClientGame(int boardSize)
 	{
 		players = new HashMap<>();
+		colors = new HashMap<>();
 		tiles = new ClientTileMap(boardSize);
 		this.boardSize = boardSize;
 	}
@@ -39,7 +40,7 @@ public class ClientGame
 		}
 
 		players.put(name, new Player( new Vector2d(x, y), new Vector2d(VEL, VEL), dir));
-		//colors.put(name, new Color(random.nextInt(256), random.nextInt(256), random.nextInt(256)));
+		colors.put(name, Color.YELLOW);
 	}
 
 	public synchronized HashMap<String, Player> getPlayers()

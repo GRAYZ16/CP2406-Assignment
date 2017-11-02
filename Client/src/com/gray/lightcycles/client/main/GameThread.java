@@ -57,17 +57,17 @@ public class GameThread implements Runnable
 
             Main.game.getTiles().update();
 
-            Vector2d lastPos = Main.player.getPos();
+            Vector2d lastPos = Main.getPlayer().getPos();
 
-            Main.player.update(delta);
+            Main.getPlayer().update(delta);
 
-			Main.game.checkDeath(Main.player);
+			Main.game.checkDeath(Main.getPlayer());
 
-            if(!Main.player.isDead())
+            if(!Main.getPlayer().isDead())
 			{
-			    if(Main.player.isLightWall())
+			    if(Main.getPlayer().isLightWall())
                 {
-                    Main.game.setTile((int)Math.round(lastPos.getX()), (int)Math.round(lastPos.getY()), Main.player.getColor());
+                    Main.game.setTile((int)Math.round(lastPos.getX()), (int)Math.round(lastPos.getY()), Main.getPlayer().getColor());
                 }
 			}
 
