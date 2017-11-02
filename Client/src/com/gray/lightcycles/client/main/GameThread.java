@@ -65,10 +65,11 @@ public class GameThread implements Runnable
 
             if(!Main.player.isDead())
 			{
-				Main.game.setTile((int)Math.round(lastPos.getX()), (int)Math.round(lastPos.getY()), Main.player.getColor());
+			    if(Main.player.isLightWall())
+                {
+                    Main.game.setTile((int)Math.round(lastPos.getX()), (int)Math.round(lastPos.getY()), Main.player.getColor());
+                }
 			}
-
-
 
             try
             {

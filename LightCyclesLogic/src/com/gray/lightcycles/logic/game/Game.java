@@ -8,7 +8,7 @@ import com.gray.lightcycles.logic.world.TileMap;
 
 public class Game
 {
-	private final float VEL = 0.5f;
+	private final float VEL = 0.3f;
 	private int boardSize;
 	private  HashMap<String, Player> players;
 	private TileMap tiles;
@@ -22,7 +22,18 @@ public class Game
 
 	public synchronized void addPlayer(int x, int y, String name)
 	{
-		players.put(name, new Player( new Vector2d(x, y), new Vector2d(VEL, VEL)));
+		int dir = Player.DIR_RIGHT;
+		System.out.println(boardSize/2);
+		if(x < boardSize / 2)
+		{
+			dir = Player.DIR_LEFT;
+		}
+		else if(y < boardSize / 2)
+		{
+			dir = Player.DIR_UP;
+		}
+
+		players.put(name, new Player( new Vector2d(x, y), new Vector2d(VEL, VEL), dir));
 	}
 
 	public synchronized HashMap<String, Player> getPlayers()
@@ -50,7 +61,10 @@ public class Game
 
 			if(!player.isDead())
 			{
-				setTile((int)Math.round(lastPos.getX()), (int)Math.round(lastPos.getY()));
+				if(player.isLightWall())
+				{
+					setTile((int)Math.round(lastPos.getX()), (int)Math.round(lastPos.getY()));
+				}
 			}
 		}
 	}

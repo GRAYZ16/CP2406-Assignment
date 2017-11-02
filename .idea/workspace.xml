@@ -3,18 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="af0a55a6-f0ee-41e6-849d-4d23b5aab71b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/entity/ClientPlayer.java" afterPath="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/entity/ClientPlayer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/ClientGame.java" afterPath="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/ClientGame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/GameThread.java" afterPath="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/GameThread.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/GameWindow.java" afterPath="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/GameWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/Input.java" afterPath="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/Input.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/Main.java" afterPath="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/net/PacketHandler.java" afterPath="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/net/PacketHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/net/ServerIOThread.java" afterPath="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/net/ServerIOThread.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycles/logic/entity/Entity.java" afterPath="$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycles/logic/entity/Entity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycles/logic/entity/Player.java" afterPath="$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycles/logic/entity/Player.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycles/logic/game/Game.java" afterPath="$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycles/logic/game/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycles/logic/math/Vector2d.java" afterPath="$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycles/logic/math/Vector2d.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/src/com/gray/main/Main.java" afterPath="$PROJECT_DIR$/Server/src/com/gray/main/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/src/com/gray/net/BroadcastThread.java" afterPath="$PROJECT_DIR$/Server/src/com/gray/net/BroadcastThread.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/src/com/gray/net/ClientThread.java" afterPath="$PROJECT_DIR$/Server/src/com/gray/net/ClientThread.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/src/com/gray/net/Server.java" afterPath="$PROJECT_DIR$/Server/src/com/gray/net/Server.java" />
     </list>
@@ -34,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="58" column="13" lean-forward="true" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+            <state relative-caret-position="497">
+              <caret line="49" column="25" lean-forward="false" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -47,38 +45,18 @@
       <file leaf-file-name="GameWindow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/GameWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="497">
+              <caret line="33" column="199" lean-forward="false" selection-start-line="33" selection-start-column="199" selection-end-line="33" selection-end-column="199" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Util.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/Util/Util.java">
+      <file leaf-file-name="ClientGame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/ClientGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServerIOThread.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/net/ServerIOThread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="62" column="48" lean-forward="false" selection-start-line="62" selection-start-column="48" selection-end-line="62" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClientThread.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server/src/com/gray/net/ClientThread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="128" column="17" lean-forward="false" selection-start-line="128" selection-start-column="17" selection-end-line="128" selection-end-column="17" />
+            <state relative-caret-position="102">
+              <caret line="13" column="33" lean-forward="false" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -87,38 +65,8 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycles/logic/game/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1275">
-              <caret line="100" column="39" lean-forward="false" selection-start-line="100" selection-start-column="39" selection-end-line="100" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Server.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Server/src/com/gray/net/Server.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="61" column="8" lean-forward="false" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BroadcastThread.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server/src/com/gray/net/BroadcastThread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="24" column="61" lean-forward="true" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server/src/com/gray/main/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="16" column="34" lean-forward="false" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+            <state relative-caret-position="89">
+              <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -127,8 +75,38 @@
       <file leaf-file-name="GameThread.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/GameThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="946">
-              <caret line="63" column="46" lean-forward="true" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
+            <state relative-caret-position="374">
+              <caret line="55" column="35" lean-forward="false" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PacketHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/net/PacketHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycles/logic/entity/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Server/src/com/gray/main/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -178,7 +156,6 @@
         <option value="$PROJECT_DIR$/Client/src/com/gray/player/ClientPlayer.java" />
         <option value="$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycleslogic/entity/ClientPlayer.java" />
         <option value="$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycleslogic/entity/Player.java" />
-        <option value="$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycles/logic/entity/Player.java" />
         <option value="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/entity/Renderable.java" />
         <option value="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/world/Tile.java" />
         <option value="$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycles/logic/world/TileMap.java" />
@@ -187,25 +164,26 @@
         <option value="$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycles/logic/world/Tile.java" />
         <option value="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/Game.java" />
         <option value="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/render/Renderable.java" />
-        <option value="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/entity/ClientPlayer.java" />
         <option value="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/world/ClientTileMap.java" />
         <option value="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/render/ClientRenderer.java" />
-        <option value="$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycles/logic/entity/Entity.java" />
         <option value="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/Util/Util.java" />
         <option value="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/Input.java" />
-        <option value="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/GameWindow.java" />
         <option value="$PROJECT_DIR$/Server/src/com/gray/net/LogicThread.java" />
-        <option value="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/GameThread.java" />
-        <option value="$PROJECT_DIR$/Server/src/com/gray/main/Main.java" />
         <option value="$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycles/logic/math/Vector2d.java" />
-        <option value="$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycles/logic/game/Game.java" />
-        <option value="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/ClientGame.java" />
-        <option value="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/net/PacketHandler.java" />
-        <option value="$PROJECT_DIR$/Server/src/com/gray/net/BroadcastThread.java" />
-        <option value="$PROJECT_DIR$/Server/src/com/gray/net/ClientThread.java" />
-        <option value="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/Main.java" />
         <option value="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/net/ServerIOThread.java" />
         <option value="$PROJECT_DIR$/Server/src/com/gray/net/Server.java" />
+        <option value="$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycles/logic/entity/Player.java" />
+        <option value="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/entity/ClientPlayer.java" />
+        <option value="$PROJECT_DIR$/Server/src/com/gray/net/ClientThread.java" />
+        <option value="$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycles/logic/entity/Entity.java" />
+        <option value="$PROJECT_DIR$/Server/src/com/gray/net/BroadcastThread.java" />
+        <option value="$PROJECT_DIR$/Server/src/com/gray/main/Main.java" />
+        <option value="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/GameThread.java" />
+        <option value="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/GameWindow.java" />
+        <option value="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/net/PacketHandler.java" />
+        <option value="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/ClientGame.java" />
+        <option value="$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycles/logic/game/Game.java" />
+        <option value="$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/Main.java" />
       </list>
     </option>
   </component>
@@ -422,6 +400,17 @@
               <item name="gray" type="462c0819:PsiDirectoryNode" />
               <item name="lightcycles" type="462c0819:PsiDirectoryNode" />
               <item name="logic" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CP2406-Assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CP2406-Assignment" type="462c0819:PsiDirectoryNode" />
+              <item name="LightCyclesLogic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="gray" type="462c0819:PsiDirectoryNode" />
+              <item name="lightcycles" type="462c0819:PsiDirectoryNode" />
+              <item name="logic" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -434,6 +423,28 @@
               <item name="lightcycles" type="462c0819:PsiDirectoryNode" />
               <item name="logic" type="462c0819:PsiDirectoryNode" />
               <item name="math" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CP2406-Assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CP2406-Assignment" type="462c0819:PsiDirectoryNode" />
+              <item name="LightCyclesLogic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="gray" type="462c0819:PsiDirectoryNode" />
+              <item name="lightcycles" type="462c0819:PsiDirectoryNode" />
+              <item name="logic" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CP2406-Assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CP2406-Assignment" type="462c0819:PsiDirectoryNode" />
+              <item name="LightCyclesLogic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="gray" type="462c0819:PsiDirectoryNode" />
+              <item name="lightcycles" type="462c0819:PsiDirectoryNode" />
+              <item name="logic" type="462c0819:PsiDirectoryNode" />
+              <item name="world" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CP2406-Assignment" type="b2602c69:ProjectViewProjectNode" />
@@ -1119,16 +1130,15 @@
       <workItem from="1509436417531" duration="2145000" />
       <workItem from="1509505415881" duration="599000" />
       <workItem from="1509547781302" duration="2152000" />
-      <workItem from="1509589188186" duration="3383000" />
+      <workItem from="1509589188186" duration="20525000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170115000" />
+    <option name="totallyTimeSpent" value="187257000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1138,7 +1148,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2057264" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2057264" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1254,13 +1264,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Client/src/com/gray/player/ClientPlayer.java" />
     <entry file="file://$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycleslogic/entity/ClientPlayer.java" />
-    <entry file="file://$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycles/logic/entity/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycles/logic/world/TileMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -1323,40 +1326,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycles/logic/entity/Entity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="113" column="53" lean-forward="false" selection-start-line="113" selection-start-column="53" selection-end-line="113" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycles/logic/net/LightCyclesPacket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="31" column="9" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="31" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/Input.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="56" column="20" lean-forward="false" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test/src/ClientSendTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/com/gray/net/ReceiveThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1379,7 +1352,7 @@
         <state relative-caret-position="1071">
           <caret line="70" column="13" lean-forward="false" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1405,16 +1378,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/entity/ClientPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="36" column="70" lean-forward="false" selection-start-line="36" selection-start-column="70" selection-end-line="36" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/Main.java___jb_tmp___" />
     <entry file="file://$PROJECT_DIR$/Test/src/ClientTest.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1426,11 +1389,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/net/ClientNetwork.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="306">
           <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
           <folding>
-            <element signature="e#352#353#0" expanded="false" />
-            <element signature="e#410#411#0" expanded="false" />
             <element signature="e#433#434#0" expanded="false" />
             <element signature="e#481#482#0" expanded="false" />
           </folding>
@@ -1439,25 +1400,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/src/com/gray/net/LogicThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
+        <state relative-caret-position="588">
           <caret line="51" column="5" lean-forward="false" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/ClientGame.java">
+    <entry file="file://$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/net/ServerIOThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="54" column="16" lean-forward="false" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+        <state relative-caret-position="357">
+          <caret line="47" column="64" lean-forward="true" selection-start-line="47" selection-start-column="64" selection-end-line="47" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/net/PacketHandler.java">
+    <entry file="file://$PROJECT_DIR$/Server/src/com/gray/net/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state relative-caret-position="361">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/com/gray/net/ReceiveThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/com/gray/net/ClientThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="78" column="36" lean-forward="false" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycles/logic/entity/Entity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="94" column="40" lean-forward="true" selection-start-line="94" selection-start-column="40" selection-end-line="94" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/Input.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="701">
+          <caret line="56" column="20" lean-forward="false" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/entity/ClientPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="23" column="28" lean-forward="false" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1469,74 +1474,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/GameThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="946">
-          <caret line="63" column="46" lean-forward="true" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycles/logic/game/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="100" column="39" lean-forward="false" selection-start-line="100" selection-start-column="39" selection-end-line="100" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Server/src/com/gray/net/BroadcastThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="61" lean-forward="true" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
+        <state relative-caret-position="238">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/com/gray/net/ClientThread.java">
+    <entry file="file://$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycles/logic/net/LightCyclesPacket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="128" column="17" lean-forward="false" selection-start-line="128" selection-start-column="17" selection-end-line="128" selection-end-column="17" />
+        <state relative-caret-position="378">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/Main.java">
+    <entry file="file://$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycles/logic/entity/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="58" column="13" lean-forward="true" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/GameWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/net/ServerIOThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="62" column="48" lean-forward="false" selection-start-line="62" selection-start-column="48" selection-end-line="62" selection-end-column="48" />
+        <state relative-caret-position="289">
+          <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/src/com/gray/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="34" lean-forward="false" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/com/gray/net/Server.java">
+    <entry file="file://$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/net/PacketHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="61" column="8" lean-forward="false" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
+        <state relative-caret-position="233">
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/GameWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="33" column="199" lean-forward="false" selection-start-line="33" selection-start-column="199" selection-end-line="33" selection-end-column="199" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/ClientGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="13" column="33" lean-forward="false" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LightCyclesLogic/src/com/gray/lightcycles/logic/game/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/GameThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="55" column="35" lean-forward="false" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/src/com/gray/lightcycles/client/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="49" column="25" lean-forward="false" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
           <folding />
         </state>
       </provider>

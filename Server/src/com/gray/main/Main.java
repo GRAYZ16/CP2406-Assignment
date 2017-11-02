@@ -19,7 +19,7 @@ public class Main
 		logger.info("Starting Light Cycles Server");
 
 		game.addPlayer(10,20, "Josh");
-		game.addPlayer(100,100, "Sara");
+		game.addPlayer(50,50, "Sara");
 
 		Server server = new Server();
 

@@ -59,7 +59,7 @@ public class Server
 				e.printStackTrace();
 			}
 		}
-		
+
 
 		(new Thread(new LogicThread())).start();
 

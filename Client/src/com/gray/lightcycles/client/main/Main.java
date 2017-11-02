@@ -34,9 +34,18 @@ public class Main
 	public static void main(String[] args)
 	{
 		game = new ClientGame(Util.BOARD_SIZE);
-		player = new ClientPlayer(new Vector2d(10, 10), new Vector2d(0.5, 0.5));
-		player.setDir(Player.DIR_RIGHT);
+
+		player = new ClientPlayer(new Vector2d(0, 0), new Vector2d(0, 0));
 		player.setColor(new Color(0, 191, 255));
+
+		if(player.getPos().getX() < Util.BOARD_SIZE / 2)
+		{
+			player.setDir(Player.DIR_LEFT);
+		}
+		else if(player.getPos().getY() < Util.BOARD_SIZE / 2)
+		{
+			player.setDir(Player.DIR_UP);
+		}
 
 		userName = "Evie1";
 		serverState = false;
@@ -62,7 +71,6 @@ public class Main
 		}
 		(new Thread(new ServerIOThread("ADD " + userName))).start();
 
-
 		KeyListener listener = new Input();
 
 		frame = new JFrame();
@@ -87,7 +95,6 @@ public class Main
 				e.printStackTrace();
 			}
 		}
-
 		(new Thread(new GameThread(frame))).start();
 	}
 }

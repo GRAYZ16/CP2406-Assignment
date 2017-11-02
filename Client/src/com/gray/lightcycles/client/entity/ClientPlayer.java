@@ -18,6 +18,13 @@ public class ClientPlayer extends Player implements Renderable
 		color = Color.BLACK;
 	}
 
+	public ClientPlayer(Vector2d pos, Vector2d vel, int dir)
+	{
+		super(pos, vel, dir);
+		color = Color.BLACK;
+	}
+
+
 	@Override
 	public void draw(Graphics g)
 	{

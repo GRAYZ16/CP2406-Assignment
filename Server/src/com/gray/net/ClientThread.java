@@ -7,6 +7,7 @@ import com.gray.main.Main;
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.InetAddress;
+import java.util.Random;
 
 public class ClientThread implements Runnable
 {
@@ -74,7 +75,8 @@ public class ClientThread implements Runnable
 			case "ADD":
 				if(Server.status == Server.IDLE || Server.status == Server.WAITING)
 				{
-					Main.game.addPlayer(0,0, command[1]);
+					Random random = new Random();
+					Main.game.addPlayer(random.nextInt(Main.gridSize - 10) ,random.nextInt(Main.gridSize -10), command[1]);
 					sendResponse("OKAY");
 				}
 				else if(Server.status == Server.PLAYING)
@@ -99,7 +101,6 @@ public class ClientThread implements Runnable
 				else if(Server.status == Server.PLAYING)
 				{
 					Main.game.removePlayer(command[1]);
-					//TODO: Kill Player
 					sendResponse("OKAY");
 				}
 				else

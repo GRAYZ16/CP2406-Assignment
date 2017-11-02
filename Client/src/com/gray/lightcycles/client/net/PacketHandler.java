@@ -32,8 +32,7 @@ public class PacketHandler implements  Runnable
 
 				for(Map.Entry<String, Player> entry : players.entrySet())
 				{
-
-
+					System.out.println(entry.getKey());
 
 					if(entry.getKey().equals(Main.userName))
 					{
@@ -56,12 +55,12 @@ public class PacketHandler implements  Runnable
 			}
 			else
 			{
-				String[] recievedData = payload.split(",");
+				String[] receivedData = payload.split(",");
 
-				if(recievedData.length == 2)
+				if(receivedData.length == 2)
 				{
-					ClientNetwork.serverAddress = recievedData[0];
-					ClientNetwork.serverPort = Integer.parseInt(recievedData[1]);
+					ClientNetwork.serverAddress = receivedData[0];
+					ClientNetwork.serverPort = Integer.parseInt(receivedData[1]);
 				}
 
 			}

@@ -13,6 +13,12 @@ public class Player extends Entity
 		isLightWall = true;
 	}
 
+	public Player(Vector2d pos, Vector2d vel, int direction)
+	{
+		super(pos, vel, direction);
+		isLightWall = true;
+	}
+
 	public Player(Vector2d pos, boolean isLightWall)
 	{
 		super(pos, new Vector2d(1, 1));

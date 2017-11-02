@@ -2,6 +2,7 @@ package com.gray.lightcycles.client.main;
 
 import java.awt.*;
 import java.util.HashMap;
+import java.util.Random;
 
 import com.gray.lightcycles.client.world.ClientTileMap;
 import com.gray.lightcycles.logic.entity.Player;
@@ -10,9 +11,10 @@ import com.gray.lightcycles.logic.world.TileMap;
 
 public class ClientGame
 {
-	private final float VEL = 5;
+	private final float VEL = 0.3f;
 	private int boardSize;
 	private  HashMap<String, Player> players;
+	//private  HashMap<String, Color> colors;
 	private ClientTileMap tiles;
 
 	public ClientGame(int boardSize)
@@ -24,7 +26,20 @@ public class ClientGame
 
 	public synchronized void addPlayer(double x, double y, String name)
 	{
-		players.put(name, new Player( new Vector2d(x, y), new Vector2d(VEL, VEL)));
+		Random random = new Random();
+		int dir = 1;
+
+		if(x < boardSize / 2)
+		{
+			dir = 3;
+		}
+		else if(y < boardSize / 2)
+		{
+			dir = 0;
+		}
+
+		players.put(name, new Player( new Vector2d(x, y), new Vector2d(VEL, VEL), dir));
+		//colors.put(name, new Color(random.nextInt(256), random.nextInt(256), random.nextInt(256)));
 	}
 
 	public synchronized HashMap<String, Player> getPlayers()
@@ -84,7 +99,7 @@ public class ClientGame
 		tiles.setTile(x,y, color);
 	}
 
-	public synchronized void setPlater(String name, Player player)
+	public synchronized void setPlayer(String name, Player player)
 	{
 
 	}

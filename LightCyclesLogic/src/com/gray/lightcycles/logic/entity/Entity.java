@@ -2,6 +2,8 @@ package com.gray.lightcycles.logic.entity;
 
 import com.gray.lightcycles.logic.math.Vector2d;
 
+import java.util.Vector;
+
 public class Entity
 {
 	//Direction Constants, direction is defined 0 - 3 clockwise from UP position
@@ -9,9 +11,9 @@ public class Entity
 	public static final int RIGHT = 1;
 
 	public static final int DIR_UP = 0;
-	public static final int DIR_LEFT = 1;
+	public static final int DIR_RIGHT = 1;
 	public static final int DIR_DOWN = 2;
-	public static final int DIR_RIGHT = 3;
+	public static final int DIR_LEFT = 3;
 
 	private Vector2d pos;
 	private  Vector2d vel;
@@ -30,6 +32,15 @@ public class Entity
 		isDead = false;
 	}
 
+	public Entity(Vector2d pos, Vector2d vel, int direction)
+	{
+		this.pos = pos;
+		this.vel = vel;
+		this.direction = direction;
+		setDir(direction);
+		isDead = false;
+	}
+
 	public Entity(double xPos, double yPos, double xVel, double yVel)
 	{
 		pos = new Vector2d(xPos, yPos);
@@ -43,7 +54,7 @@ public class Entity
 		{
 			if(this.direction == DIR_UP)
 			{
-				setDir(DIR_RIGHT);
+				setDir(DIR_LEFT);
 			}else
 			{
 				setDir(this.direction - 1);
@@ -60,7 +71,7 @@ public class Entity
 		switch(dir)
 		{
 			case DIR_UP:
-				if(this.direction == 1)
+				if(this.direction == DIR_RIGHT)
 					setPos(new Vector2d(Math.ceil(getPos().getX()), getPos().getY()));
 				else
 					setPos(new Vector2d(Math.floor(getPos().getX()), getPos().getY()));
@@ -68,7 +79,7 @@ public class Entity
 				this.dir = new Vector2d(0,1);
 				break;
 			case DIR_DOWN:
-				if(this.direction == 1)
+				if(this.direction == DIR_RIGHT)
 					setPos(new Vector2d(Math.ceil(getPos().getX()), getPos().getY()));
 				else
 					setPos(new Vector2d(Math.floor(getPos().getX()), getPos().getY()));
@@ -76,20 +87,20 @@ public class Entity
 				this.dir = new Vector2d(0, -1);
 				break;
 			case DIR_LEFT:
-				if(this.direction == 0)
-					setPos(new Vector2d(getPos().getX(), Math.ceil(getPos().getY())));
-				else
-					setPos(new Vector2d(getPos().getX(), Math.floor(getPos().getY())));
-
-				this.dir = new Vector2d(-1, 0);
-				break;
-			case DIR_RIGHT:
-				if(this.direction == 0)
+				if(this.direction == DIR_UP)
 					setPos(new Vector2d(getPos().getX(), Math.ceil(getPos().getY())));
 				else
 					setPos(new Vector2d(getPos().getX(), Math.floor(getPos().getY())));
 
 				this.dir = new Vector2d(1, 0);
+				break;
+			case DIR_RIGHT:
+				if(this.direction == DIR_UP)
+					setPos(new Vector2d(getPos().getX(), Math.ceil(getPos().getY())));
+				else
+					setPos(new Vector2d(getPos().getX(), Math.floor(getPos().getY())));
+
+				this.dir = new Vector2d(-1, 0);
 				break;
 		}
 
