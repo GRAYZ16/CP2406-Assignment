@@ -111,7 +111,7 @@ public class Entity
 
 	public Vector2d nextPos()
 	{
-		return getPos().add(getVel().mul(dir).scale(2));
+		return getPos().add(getVel().mul(dir).scale(1 / getVel().getX()));
 	}
 
 	public boolean isDead()

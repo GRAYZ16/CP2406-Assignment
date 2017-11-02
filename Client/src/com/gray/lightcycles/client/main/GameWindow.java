@@ -29,6 +29,7 @@ public class GameWindow extends JPanel
 
 		Main.renderer.draw(g);
 
+		g2d.setColor(Color.YELLOW);
 		g2d.fillRect((int)Main.game.getPlayer("Josh").getPos().getX() * Util.TILE_SIZE, (int)Main.game.getPlayer("Josh").getPos().getY() * Util.TILE_SIZE, 2 * Util.TILE_SIZE, Util.TILE_SIZE);
 		g2d.drawString("Josh", (int)Main.game.getPlayer("Josh").getPos().getX() * Util.TILE_SIZE + Util.TILE_SIZE, (int)Main.game.getPlayer("Josh").getPos().getY() * Util.TILE_SIZE + Util.TILE_SIZE);
 

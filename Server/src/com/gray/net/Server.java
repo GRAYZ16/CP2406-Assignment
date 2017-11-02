@@ -1,5 +1,6 @@
 package com.gray.net;
 
+import com.gray.lightcycles.logic.entity.Player;
 import com.gray.lightcycles.logic.net.Network;
 import com.gray.main.Main;
 
@@ -43,22 +44,25 @@ public class Server
 		(new Thread(new ReceiveThread())).start();
 		(new Thread(new BroadcastThread())).start();
 
-
-		int counter = 0;
-
-		while(true)
+		while(status == IDLE)
 		{
-			counter++;
-			Main.game.setPlayerStatus("Josh", (float)(20 + 20*Math.sin(Math.toRadians(counter))), 50, false);
+			if(Main.game.getPlayers().size() >= Main.MAX_PLAYERS)
+			{
+				status = PLAYING;
+			}
 			try
 			{
-				Thread.sleep(10);
+				Thread.sleep(1000);
 			}
-			catch (Exception e)
+			catch(Exception e)
 			{
-
+				e.printStackTrace();
 			}
 		}
+		
+
+		(new Thread(new LogicThread())).start();
+
 	}
 
 	public void setState()

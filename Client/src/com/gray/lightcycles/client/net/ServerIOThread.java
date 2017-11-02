@@ -19,7 +19,7 @@ public class ServerIOThread implements Runnable
 
         String command = msg.split(" ")[0];
 
-        if(command.equals("ADD") || command.equals("REMOVE") || command.equals("GRID") || command.equals("SAVE") || command.equals("GET"))
+        if(command.equals("ADD") || command.equals("REMOVE") || command.equals("GRID") || command.equals("SAVE") || command.equals("GET") || command.equals("GAME"))
             receiveResponse(command);
 
     }
@@ -47,6 +47,22 @@ public class ServerIOThread implements Runnable
                 String[] gridSize = payload.split(" ");
                 Main.windowSize.set(Double.parseDouble(gridSize[0]), Double.parseDouble(gridSize[1]));
                 break;
+            case "GAME":
+                switch(payload)
+                {
+					case "IDLE":
+						Main.serverState = false;
+						break;
+					case "WAITING FOR USERS":
+						Main.serverState = false;
+						break;
+					case "PLAYING":
+						Main.serverState = true;
+						break;
+					case "GAME OVER":
+						Main.serverState = true;
+						break;
+                }
             case "SAVE":
                 if(payload.equals("OKAY"))
                     return;

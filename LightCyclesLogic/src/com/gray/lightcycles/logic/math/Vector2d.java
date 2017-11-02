@@ -63,4 +63,9 @@ public class Vector2d
 	{
 		return (x == vector.getX() && y == vector.getY());
 	}
+
+	public double magnitude()
+	{
+		return Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+	}
 }

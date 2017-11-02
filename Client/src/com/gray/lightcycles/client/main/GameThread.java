@@ -53,6 +53,8 @@ public class GameThread implements Runnable
 
             //update physics and redraw
             frame.repaint();
+            Main.game.update(delta);
+
             Main.game.getTiles().update();
 
             Vector2d lastPos = Main.player.getPos();

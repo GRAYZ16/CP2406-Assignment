@@ -8,7 +8,7 @@ import com.gray.lightcycles.logic.world.TileMap;
 
 public class Game
 {
-	private final float VEL = 5;
+	private final float VEL = 0.5f;
 	private int boardSize;
 	private  HashMap<String, Player> players;
 	private TileMap tiles;
@@ -42,11 +42,16 @@ public class Game
 
 	public synchronized void update(double delta)
 	{
-
-		//TODO: Fix
-		for(Player player : players.values()) {
+		for(Player player : players.values())
+		{
+			Vector2d lastPos = player.getPos();
 			player.update(delta);
 			checkDeath(player);
+
+			if(!player.isDead())
+			{
+				setTile((int)Math.round(lastPos.getX()), (int)Math.round(lastPos.getY()));
+			}
 		}
 	}
 
@@ -79,12 +84,21 @@ public class Game
 		tiles.setTile(x,y);
 	}
 
-	public synchronized void setPlayerStatus(String name, float x, float y, boolean isJetWall)
+	public synchronized void setPlayer(String name, Player player)
+	{
+		players.put(name, player);
+	}
+
+	public synchronized void removePlayer(String name)
+	{
+		players.remove(name);
+	}
+
+	public synchronized void setPlayerStatus(String name, double x, double y, boolean isJetWall)
 	{
 		Player player = players.get(name);
 		player.setPos(new Vector2d(x, y));
-		//TODO : Jetwall code
-		//player.isJetWall();
+		player.setLightWall(isJetWall);
 		players.put(name, player);
 	}
 }

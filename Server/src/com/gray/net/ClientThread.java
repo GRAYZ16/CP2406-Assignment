@@ -1,5 +1,7 @@
 package com.gray.net;
 
+import com.gray.lightcycles.logic.entity.Player;
+import com.gray.lightcycles.logic.math.Vector2d;
 import com.gray.main.Main;
 
 import java.io.IOException;
@@ -39,22 +41,40 @@ public class ClientThread implements Runnable
 		switch(command[0])
 		{
 			case "USER":
+				Player player = Main.game.getPlayer(command[1]);
+
 				switch(command[2])
 				{
 					case "TURN":
+						if(command[3].equals("RIGHT"))
+							player.turn(Player.RIGHT);
+						else if(command[3].equals("LEFT"))
+							player.turn(Player.LEFT);
 						break;
 					case "GO":
-
+						if(command[3].equals("FASTER"))
+							player.setVel(player.getVel().add(new Vector2d(0.3, 0.3)));
+						else if(command[3].equals("SLOWER"))
+							player.setVel(player.getVel().add(new Vector2d(-0.3, -0.3)));
 						break;
 					case "JETWALL":
-
+						if(command[3].equals("ON"))
+						{
+							player.setLightWall(true);
+						}
+						else if(command[3].equals("OFF"))
+						{
+							player.setLightWall(false);
+						}
 						break;
 				}
+
+				Main.game.setPlayer(command[1], player);
 				break;
 			case "ADD":
 				if(Server.status == Server.IDLE || Server.status == Server.WAITING)
 				{
-					//TODO: Add Player
+					Main.game.addPlayer(0,0, command[1]);
 					sendResponse("OKAY");
 				}
 				else if(Server.status == Server.PLAYING)
@@ -73,11 +93,12 @@ public class ClientThread implements Runnable
 			case "REMOVE":
 				if(Server.status == Server.IDLE || Server.status == Server.WAITING || Server.status == Server.GAME_OVER)
 				{
-					//TODO: Remove Player
+					Main.game.removePlayer(command[1]);
 					sendResponse("OKAY");
 				}
 				else if(Server.status == Server.PLAYING)
 				{
+					Main.game.removePlayer(command[1]);
 					//TODO: Kill Player
 					sendResponse("OKAY");
 				}
@@ -87,8 +108,25 @@ public class ClientThread implements Runnable
 				}
 				break;
 			case "GRID":
-
+				sendResponse(Main.gridSize + "," + Main.gridSize);
 				break;
+
+			case "GAME":
+				switch(Server.status)
+				{
+					case Server.IDLE:
+						sendResponse("IDLE");
+						break;
+					case Server.WAITING:
+						sendResponse("WAITING FOR USERS");
+						break;
+					case Server.PLAYING:
+						sendResponse("PLAYING");
+						break;
+					case Server.GAME_OVER:
+						sendResponse("GAME OVER");//TODO: Add Winner
+						break;
+				}
 			case "SAVE":
 				break;
 			default:

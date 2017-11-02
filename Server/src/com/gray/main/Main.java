@@ -9,24 +9,25 @@ public class Main
 	public static LightCyclesLogger logger;
 	public static Game game;
 
-	public static final int BOARD_SIZE = 200;
+	public static int gridSize = 100;
+	public static final int MAX_PLAYERS = 3;
 
 	public static void main(String[] args)
 	{
-		game = new Game(BOARD_SIZE);
+		game = new Game(gridSize);
 		logger = new LightCyclesLogger();
 		logger.info("Starting Light Cycles Server");
 
-		game.addPlayer(10,10, "Josh");
+		game.addPlayer(10,20, "Josh");
 		game.addPlayer(100,100, "Sara");
 
 		Server server = new Server();
 
 		server.run();
-
 	}
 
 	public void run()
 	{
+
 	}
 }

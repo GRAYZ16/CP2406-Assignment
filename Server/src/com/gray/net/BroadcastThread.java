@@ -12,7 +12,7 @@ public class BroadcastThread implements Runnable
 	{
 		int count = 0;
 
-		while(true)
+		while(Server.status != Server.GAME_OVER)
 		{
 			try
 			{
@@ -25,9 +25,13 @@ public class BroadcastThread implements Runnable
 					Server.network.sendBroadcast(serverInfo);
 				}
 
+				if(Server.status != Server.IDLE)
+				{
+					LightCyclesPacket packet = new LightCyclesPacket(Main.game.getPlayers());
+					Server.network.sendBroadcast(packet.getPacket());
+				}
 
-				LightCyclesPacket packet = new LightCyclesPacket(Main.game.getPlayers());
-				Server.network.sendBroadcast(packet.getPacket());
+
 				Thread.sleep(100);
 			}
 			catch(Exception e)
