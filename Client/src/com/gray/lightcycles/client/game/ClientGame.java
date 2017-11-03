@@ -1,4 +1,4 @@
-package com.gray.lightcycles.client.main;
+package com.gray.lightcycles.client.game;
 
 import java.awt.*;
 import java.util.HashMap;
@@ -8,7 +8,6 @@ import java.util.Random;
 import com.gray.lightcycles.client.world.ClientTileMap;
 import com.gray.lightcycles.logic.entity.Player;
 import com.gray.lightcycles.logic.math.Vector2d;
-import com.gray.lightcycles.logic.world.TileMap;
 
 public class ClientGame
 {
@@ -31,6 +30,7 @@ public class ClientGame
 		Random random = new Random();
 		int dir = 1;
 
+		//Face the player towards the centre of the board
 		if(x < boardSize / 2)
 		{
 			dir = 3;
@@ -61,6 +61,8 @@ public class ClientGame
 
 	public synchronized void update(double delta)
 	{
+
+		//Calculate the update for each player and check collisions
 		for(Map.Entry<String, Player> entry : players.entrySet())
 		{
 			Vector2d lastPos = entry.getValue().getPos();
@@ -76,16 +78,18 @@ public class ClientGame
 
 	public synchronized void checkDeath(Player player)
 	{
-		Vector2d playerPos = player.getPos();
+		Vector2d nextPos = player.nextPos();
 
-		if(player.nextPos().getX() > boardSize || player.nextPos().getX() < 0 || player.nextPos().getY() > boardSize || player.nextPos().getY() < 0)
+		//Calculates whether the player will hit the walls of the board on next update
+		if(nextPos.getX() > boardSize || nextPos.getX() < 0 || nextPos.getY() > boardSize ||nextPos.getY() < 0)
 		{
 			if(!player.isDead())
 			{
 				player.kill();
 			}
 		}
-		else if(tiles.getTile((int)Math.floor(player.nextPos().getX()), (int)Math.floor(player.nextPos().getY())).isLightWall())
+		//Also check if the player will hit a light wall
+		else if(tiles.getTile((int)Math.floor(nextPos.getX()), (int)Math.floor(nextPos.getY())).isLightWall())
 		{
 			player.kill();
 		}
@@ -96,26 +100,8 @@ public class ClientGame
 		return tiles;
 	}
 
-	public synchronized Color getColor(String name)
-	{
-		return colors.get(name);
-	}
-
 	public synchronized void setTile(int x, int y, Color color)
 	{
 		tiles.setTile(x,y, color);
-	}
-
-	public synchronized void setPlayer(String name, Player player)
-	{
-
-	}
-
-	public synchronized void setPlayerStatus(String name, double x, double y, boolean isJetWall)
-	{
-		Player player = players.get(name);
-		player.setPos(new Vector2d(x, y));
-		player.setLightWall(isJetWall);
-		players.put(name, player);
 	}
 }

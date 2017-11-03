@@ -1,7 +1,7 @@
-package com.gray.net;
+package com.gray.lightcycles.server.net;
 
 import com.gray.lightcycles.logic.net.LightCyclesPacket;
-import com.gray.main.Main;
+import com.gray.lightcycles.server.main.Main;
 
 import java.net.DatagramPacket;
 

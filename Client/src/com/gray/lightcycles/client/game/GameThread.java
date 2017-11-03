@@ -1,6 +1,8 @@
-package com.gray.lightcycles.client.main;
+package com.gray.lightcycles.client.game;
 
 import com.gray.lightcycles.client.Util.Util;
+import com.gray.lightcycles.client.main.Main;
+import com.gray.lightcycles.client.net.ServerIOThread;
 import com.gray.lightcycles.logic.math.Vector2d;
 
 import javax.swing.*;
@@ -74,6 +76,7 @@ public class GameThread implements Runnable
 			if(Main.getPlayer().isDead())
             {
                 isRunning = false;
+                (new Thread(new ServerIOThread("GET"))).start();
             }
 
             try

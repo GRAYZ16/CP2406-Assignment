@@ -1,11 +1,7 @@
-package com.gray.net;
+package com.gray.lightcycles.server.net;
 
-import com.gray.lightcycles.logic.entity.Player;
-import com.gray.lightcycles.logic.math.Vector2d;
-import com.gray.main.Main;
-import com.gray.scores.Scoreboard;
-
-import java.util.HashMap;
+import com.gray.lightcycles.server.main.Main;
+import com.gray.lightcycles.server.scores.Scoreboard;
 
 public class LogicThread implements Runnable
 {

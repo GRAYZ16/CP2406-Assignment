@@ -1,6 +1,8 @@
-package com.gray.lightcycles.client.main;
+package com.gray.lightcycles.client.render;
 
 import com.gray.lightcycles.client.Util.Util;
+import com.gray.lightcycles.client.game.GameThread;
+import com.gray.lightcycles.client.main.Main;
 import com.gray.lightcycles.logic.entity.Player;
 
 import javax.swing.*;
@@ -11,6 +13,7 @@ public class GameWindow extends JPanel
 {
 	int counter;
 
+	//The JPanel class that handles the game display
 	public GameWindow()
 	{
 		setPreferredSize(new Dimension(Util.WINDOW_WIDTH, Util.WINDOW_HEIGHT));

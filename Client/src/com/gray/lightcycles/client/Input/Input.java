@@ -1,5 +1,6 @@
-package com.gray.lightcycles.client.main;
+package com.gray.lightcycles.client.Input;
 
+import com.gray.lightcycles.client.main.Main;
 import com.gray.lightcycles.logic.entity.Player;
 import com.gray.lightcycles.logic.math.Vector2d;
 import com.gray.lightcycles.client.net.ServerIOThread;
@@ -16,7 +17,8 @@ public class Input implements KeyListener
 
     }
 
-    @Override
+	//Check user input and send data to the server as well as update the client data
+	@Override
     public void keyPressed(KeyEvent e)
     {
     	Vector2d lastPos;

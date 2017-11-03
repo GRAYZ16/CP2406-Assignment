@@ -1,12 +1,13 @@
-package com.gray.net;
+package com.gray.lightcycles.server.net;
 
 import com.gray.lightcycles.logic.entity.Player;
 import com.gray.lightcycles.logic.math.Vector2d;
-import com.gray.main.Main;
+import com.gray.lightcycles.server.main.Main;
+import com.gray.lightcycles.server.scores.Scoreboard;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
-import java.net.InetAddress;
+import java.util.List;
 import java.util.Random;
 
 public class ClientThread implements Runnable
@@ -125,10 +126,14 @@ public class ClientThread implements Runnable
 						sendResponse("PLAYING");
 						break;
 					case Server.GAME_OVER:
-						sendResponse("GAME OVER");//TODO: Add Winner
+						sendResponse("GAME OVER");
 						break;
 				}
-			case "SAVE":
+			case "GET":
+				List<String> scores = Scoreboard.getScores();
+				String payload = "OKAY " + String.join(" ", scores);
+
+				sendResponse(payload);
 				break;
 			default:
 				Main.logger.info("Incorrect Message Received: " + message);

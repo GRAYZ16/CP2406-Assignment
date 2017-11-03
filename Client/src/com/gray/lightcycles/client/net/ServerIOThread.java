@@ -6,7 +6,9 @@ import java.net.DatagramPacket;
 
 public class ServerIOThread implements Runnable
 {
-    String msg;
+    private String msg;
+
+    //Thread that handles direct communication between client and server
     public ServerIOThread(String msg)
     {
         this.msg = msg;
@@ -24,7 +26,8 @@ public class ServerIOThread implements Runnable
 
     }
 
-    public void receiveResponse(String command)
+    //For requests that require a response, wait and verify the response
+    private void receiveResponse(String command)
     {
         DatagramPacket packet = ClientNetwork.network.receivePacket();
         String payload = new String(packet.getData(), packet.getOffset(), packet.getLength());
@@ -35,13 +38,13 @@ public class ServerIOThread implements Runnable
                 if(payload.equals("OKAY"))
                     return;
                 else
-                    System.out.println("ERROR");
+                    System.out.println("WAITING TO ADD");
                 break;
             case "REMOVE":
                 if(payload.equals("OKAY"))
                     return;
                 else
-                    System.out.println("ERROR");
+                    System.out.println("WAITING TO REMOVE");
                 break;
             case "GRID":
                 String[] gridSize = payload.split(" ");
@@ -63,14 +66,22 @@ public class ServerIOThread implements Runnable
 						Main.serverState = true;
 						break;
                 }
+                break;
             case "SAVE":
                 if(payload.equals("OKAY"))
                     return;
                 else
-                    System.out.println("ERROR");
+                    System.out.println("ERROR SAVING");
                 break;
             case "GET":
-                //TODO: Implement Leaderboards
+            	if(!payload.equals("FAILED"))
+				{
+					String[] data = payload.split(",");
+					for(int i = 0; i < 5; i++)
+					{
+						System.out.println(data[i + 1]);
+					}
+				}
                 break;
         }
     }

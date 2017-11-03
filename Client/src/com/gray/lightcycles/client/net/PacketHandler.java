@@ -11,6 +11,7 @@ import java.util.Map;
 public class PacketHandler implements  Runnable
 {
 
+	//Thread that receives and handles broadcasts sent by the server
 	public PacketHandler()
 	{
 
@@ -23,6 +24,8 @@ public class PacketHandler implements  Runnable
 		{
 			DatagramPacket packet = ClientNetwork.network.receiveBroadcast();
 			String payload = new String(packet.getData(), packet.getOffset(), packet.getLength());
+
+			//Determine whether the information is game data or network information
 			if(payload.split(" ").length > 1)
 			{
 				LightCyclesPacket playerPacket = new LightCyclesPacket(packet);

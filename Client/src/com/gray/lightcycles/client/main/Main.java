@@ -1,10 +1,14 @@
 package com.gray.lightcycles.client.main;
 
+import com.gray.lightcycles.client.Input.Input;
 import com.gray.lightcycles.client.Util.Util;
 import com.gray.lightcycles.client.entity.ClientPlayer;
+import com.gray.lightcycles.client.game.ClientGame;
+import com.gray.lightcycles.client.game.GameThread;
 import com.gray.lightcycles.client.net.ClientNetwork;
 import com.gray.lightcycles.client.net.ServerIOThread;
 import com.gray.lightcycles.client.render.ClientRenderer;
+import com.gray.lightcycles.client.render.GameWindow;
 import com.gray.lightcycles.logic.entity.Player;
 import com.gray.lightcycles.logic.math.Vector2d;
 
@@ -42,7 +46,7 @@ public class Main
 			getPlayer().setDir(Player.DIR_UP);
 		}
 
-		userName = "GRAYZ11145";
+		userName = "GRAYZ145";
 		serverState = false;
 
 		renderer = new ClientRenderer();

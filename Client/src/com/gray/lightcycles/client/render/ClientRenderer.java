@@ -7,6 +7,7 @@ public class ClientRenderer
 {
 	private ArrayList<Renderable> objects;
 
+	//Class that handles the rendering of all objects on screen
 	public ClientRenderer()
 	{
 		objects = new ArrayList<>();

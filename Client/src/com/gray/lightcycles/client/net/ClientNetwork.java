@@ -12,6 +12,7 @@ public class ClientNetwork
 
 	public static Network network;
 
+	//Client Network Wrapper
 	public ClientNetwork()
 	{
 		network = new Network(BROADCAST_IP, BROADCAST_PORT);
