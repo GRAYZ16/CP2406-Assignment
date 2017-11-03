@@ -71,6 +71,11 @@ public class GameThread implements Runnable
                 }
 			}
 
+			if(Main.getPlayer().isDead())
+            {
+                isRunning = false;
+            }
+
             try
             {
                 Thread.sleep((lastTime - System.nanoTime() + TARGET_TIME)/1000000);

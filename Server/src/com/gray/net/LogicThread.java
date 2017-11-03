@@ -3,6 +3,7 @@ package com.gray.net;
 import com.gray.lightcycles.logic.entity.Player;
 import com.gray.lightcycles.logic.math.Vector2d;
 import com.gray.main.Main;
+import com.gray.scores.Scoreboard;
 
 import java.util.HashMap;
 
@@ -22,6 +23,8 @@ public class LogicThread implements Runnable
 		//Find the current time at beginning of execution
 		long lastTime = System.nanoTime();
 
+		int score = 0;
+
 		//The desired time per frame in ns to be able to stabilise at FPS_CAP
 		final long TARGET_TIME = 1000000000 / 20;
 
@@ -40,11 +43,21 @@ public class LogicThread implements Runnable
 
 			Main.game.update(delta);
 
+			if(Main.game.getPlayers().size() == 1)
+			{
+				isRunning = false;
+				Server.score = score;
+				Server.winner = (String)Main.game.getPlayers().keySet().toArray()[0];
+
+				Scoreboard.newScore(Server.winner, Server.score);
+			}
+
+			score++;
+
 			try
 			{
-				Thread.sleep((lastTime - System.nanoTime() + TARGET_TIME)/1000000);
-			}
-			catch(Exception e)
+				Thread.sleep((lastTime - System.nanoTime() + TARGET_TIME) / 1000000);
+			}catch(Exception e)
 			{
 				e.printStackTrace();
 			}

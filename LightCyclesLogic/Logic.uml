@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="348.4148148148149" y="309.0">com.gray.lightcycles.logic.entity.Entity</node>
+    <node x="15.045370370370335" y="1098.0">com.gray.lightcycles.logic.game.Game</node>
+    <node x="517.8314814814815" y="864.5">com.gray.lightcycles.logic.entity.Player</node>
+    <node x="1264.188425925926" y="0.0">com.gray.lightcycles.logic.Util.LightCyclesLogger</node>
+    <node x="50.0" y="474.5">com.gray.lightcycles.logic.world.Tile</node>
+    <node x="36.5" y="809.0">com.gray.lightcycles.logic.world.TileMap</node>
+    <node x="587.188425925926" y="1175.0">com.gray.lightcycles.logic.net.LightCyclesPacket</node>
+    <node x="952.1884259259259" y="0.0">com.gray.lightcycles.logic.net.Network</node>
+    <node x="251.50000000000003" y="886.5">com.gray.lightcycles.logic.entity.LightWall</node>
+    <node x="326.62546296296307" y="0.0">com.gray.lightcycles.logic.math.Vector2d</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.gray.lightcycles.logic.game.Game" target="com.gray.lightcycles.logic.entity.Player">
+      <point x="108.75" y="-159.0" />
+      <point x="297.79537037037034" y="1068.0" />
+      <point x="587.4314814814816" y="1068.0" />
+      <point x="-46.39999999999998" y="59.0" />
+    </edge>
+    <edge source="com.gray.lightcycles.logic.net.LightCyclesPacket" target="com.gray.lightcycles.logic.math.Vector2d">
+      <point x="106.66666666666663" y="-82.0" />
+      <point x="853.8550925925927" y="1078.0" />
+      <point x="783.2953703703704" y="1078.0" />
+      <point x="783.2953703703704" y="249.0" />
+      <point x="523.2754629629629" y="249.0" />
+      <point x="93.14999999999986" y="114.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.logic.world.TileMap" target="com.gray.lightcycles.logic.world.Tile">
+      <point x="65.0" y="-114.5" />
+      <point x="199.0" y="784.0" />
+      <point x="190.0" y="784.0" />
+      <point x="56.0" y="59.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.logic.game.Game" target="com.gray.lightcycles.logic.world.TileMap">
+      <point x="-21.75" y="-159.0" />
+      <point x="167.29537037037034" y="1078.0" />
+      <point x="134.0" y="1078.0" />
+      <point x="0.0" y="114.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.logic.entity.Player" target="com.gray.lightcycles.logic.entity.Entity">
+      <point x="-77.33333333333326" y="-59.0" />
+      <point x="556.4981481481483" y="784.0" />
+      <point x="555.4148148148149" y="784.0" />
+      <point x="69.0" y="225.0" />
+    </edge>
+    <edge source="com.gray.lightcycles.logic.entity.Player" target="com.gray.lightcycles.logic.math.Vector2d">
+      <point x="0.0" y="-59.0" />
+      <point x="633.8314814814815" y="784.0" />
+      <point x="634.9587962962963" y="784.0" />
+      <point x="634.9587962962963" y="269.0" />
+      <point x="481.87546296296296" y="269.0" />
+      <point x="51.74999999999994" y="114.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.logic.entity.LightWall" target="com.gray.lightcycles.logic.math.Vector2d">
+      <point x="0.0" y="-37.0" />
+      <point x="359.0" y="784.0" />
+      <point x="333.2481481481482" y="784.0" />
+      <point x="333.2481481481482" y="279.0" />
+      <point x="399.075462962963" y="279.0" />
+      <point x="-31.05000000000001" y="114.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.logic.entity.LightWall" target="com.gray.lightcycles.logic.entity.Entity">
+      <point x="71.66666666666669" y="-37.0" />
+      <point x="430.66666666666674" y="784.0" />
+      <point x="417.4148148148149" y="784.0" />
+      <point x="-69.0" y="225.0" />
+    </edge>
+    <edge source="com.gray.lightcycles.logic.entity.Entity" target="com.gray.lightcycles.logic.math.Vector2d">
+      <point x="-92.0" y="-225.0" />
+      <point x="394.4148148148149" y="289.0" />
+      <point x="419.77546296296305" y="289.0" />
+      <point x="-10.350000000000023" y="114.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.logic.net.LightCyclesPacket" target="com.gray.lightcycles.logic.entity.Player">
+      <point x="0.0" y="-82.0" />
+      <point x="747.188425925926" y="1078.0" />
+      <point x="726.6314814814816" y="1078.0" />
+      <point x="92.80000000000007" y="59.0" />
+    </edge>
+    <edge source="com.gray.lightcycles.logic.game.Game" target="com.gray.lightcycles.logic.math.Vector2d">
+      <point x="-152.25" y="-159.0" />
+      <point x="36.795370370370335" y="1078.0" />
+      <point x="15.0" y="1078.0" />
+      <point x="15.0" y="249.0" />
+      <point x="336.9754629629631" y="249.0" />
+      <point x="-93.14999999999998" y="114.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="641.333333333333" y="765.4999999999999" />
+  <SelectedNodes>
+    <node>com.gray.lightcycles.logic.math.Vector2d</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

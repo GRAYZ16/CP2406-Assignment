@@ -22,6 +22,9 @@ public class Server
 	public static Network network;
 	public static int status;
 
+	public static String winner;
+	public static int score;
+
 
 	public Server()
 	{
@@ -46,17 +49,32 @@ public class Server
 
 		while(status == IDLE)
 		{
-			if(Main.game.getPlayers().size() >= Main.MAX_PLAYERS)
+			if(Main.game.getPlayers().size() >= Main.MIN_PLAYERS)
 			{
-				status = PLAYING;
+				int players = Main.game.getPlayers().size();
+
+				try
+				{
+					Thread.sleep(10000);
+				}catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+
+				if(Main.game.getPlayers().size() == players)
+				{
+					status = PLAYING;
+				}
 			}
-			try
+			else
 			{
-				Thread.sleep(1000);
-			}
-			catch(Exception e)
-			{
-				e.printStackTrace();
+				try
+				{
+					Thread.sleep(1000);
+				}catch(Exception e)
+				{
+					e.printStackTrace();
+				}
 			}
 		}
 

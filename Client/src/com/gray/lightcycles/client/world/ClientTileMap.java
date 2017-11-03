@@ -37,8 +37,11 @@ public class ClientTileMap implements Renderable
 
 	public void setTile(int x, int y, Color c)
 	{
-		tiles[x][y].setLightWall();
-		tiles[x][y].setColor(c);
+		if(x < boardSize && y < boardSize)
+		{
+			tiles[x][y].setLightWall();
+			tiles[x][y].setColor(c);
+		}
 	}
 
 	public ClientTile getTile(int x, int y)

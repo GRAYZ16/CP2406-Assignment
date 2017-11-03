@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="683.875" y="1453.0">com.gray.lightcycles.client.entity.ClientPlayer</node>
+    <node x="261.37499999999994" y="434.0">com.gray.lightcycles.client.world.ClientTileMap</node>
+    <node x="911.7083333333333" y="199.0">com.gray.lightcycles.client.net.ClientNetwork</node>
+    <node x="276.87499999999994" y="243.0">com.gray.lightcycles.client.world.ClientTile</node>
+    <node x="893.2320601851854" y="32.5">com.gray.lightcycles.client.net.PacketHandler</node>
+    <node x="692.4279861111113" y="478.0">com.gray.lightcycles.client.main.GameThread</node>
+    <node x="190.37499999999994" y="713.0">com.gray.lightcycles.client.main.ClientGame</node>
+    <node x="85.99939814814854" y="44.0">com.gray.lightcycles.client.render.Renderable</node>
+    <node x="1070.2613194444446" y="489.0">com.gray.lightcycles.client.net.ServerIOThread</node>
+    <node x="469.5743981481485" y="0.0">com.gray.lightcycles.client.Util.Util</node>
+    <node x="708.875" y="1153.0">com.gray.lightcycles.client.main.Main</node>
+    <node x="10.5" y="221.0">com.gray.lightcycles.client.render.ClientRenderer</node>
+    <node x="559.375" y="834.5">com.gray.lightcycles.client.main.GameWindow</node>
+    <node x="977.4279861111113" y="835.5">com.gray.lightcycles.client.main.Input</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.gray.lightcycles.client.main.Main" target="com.gray.lightcycles.client.main.GameThread">
+      <point x="6.65625" y="-125.0" />
+      <point x="822.03125" y="1133.0" />
+      <point x="824.6903935185187" y="1133.0" />
+      <point x="824.6903935185187" y="688.0" />
+      <point x="846.5946527777778" y="688.0" />
+      <point x="61.66666666666663" y="70.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.world.ClientTileMap" target="com.gray.lightcycles.client.Util.Util">
+      <point x="82.39999999999998" y="-114.5" />
+      <point x="446.7749999999999" y="409.0" />
+      <point x="473.99039351851866" y="409.0" />
+      <point x="473.99039351851866" y="179.0" />
+      <point x="515.5743981481485" y="179.0" />
+      <point x="-46.0" y="69.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.main.Main" target="com.gray.lightcycles.client.main.GameWindow">
+      <point x="-33.28125" y="-125.0" />
+      <point x="782.09375" y="1083.0" />
+      <point x="619.375" y="1083.0" />
+      <point x="-60.0" y="48.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.main.GameThread" target="com.gray.lightcycles.client.Util.Util">
+      <point x="0.0" y="-70.5" />
+      <point x="784.9279861111113" y="169.0" />
+      <point x="607.5743981481485" y="169.0" />
+      <point x="46.0" y="69.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.main.Input" target="com.gray.lightcycles.client.net.ServerIOThread">
+      <point x="0.0" y="-47.5" />
+      <point x="1084.9279861111113" y="688.0" />
+      <point x="1107.0946527777778" y="688.0" />
+      <point x="-73.66666666666674" y="59.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.main.ClientGame" target="com.gray.lightcycles.client.world.ClientTileMap">
+      <point x="0.0" y="-170.0" />
+      <point x="0.0" y="114.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.main.Input" target="com.gray.lightcycles.client.main.Main">
+      <point x="53.75" y="47.5" />
+      <point x="1138.6779861111113" y="1113.0" />
+      <point x="888.59375" y="1113.0" />
+      <point x="73.21875" y="-125.0" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.entity.ClientPlayer" target="com.gray.lightcycles.client.main.Main">
+      <point x="-65.75" y="-59.5" />
+      <point x="749.625" y="1428.0" />
+      <point x="735.5" y="1428.0" />
+      <point x="-79.875" y="125.0" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.net.ServerIOThread" target="com.gray.lightcycles.client.net.ClientNetwork">
+      <point x="0.0" y="-59.5" />
+      <point x="1180.7613194444446" y="409.0" />
+      <point x="1069.2083333333335" y="409.0" />
+      <point x="63.000000000000114" y="92.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.world.ClientTileMap" target="com.gray.lightcycles.client.render.Renderable">
+      <point x="-82.39999999999998" y="-114.5" />
+      <point x="281.97499999999997" y="409.0" />
+      <point x="266.37499999999994" y="409.0" />
+      <point x="266.37499999999994" y="179.0" />
+      <point x="208.49939814814854" y="179.0" />
+      <point x="35.0" y="25.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.entity.ClientPlayer" target="com.gray.lightcycles.client.render.Renderable">
+      <point x="-109.58333333333337" y="-59.5" />
+      <point x="705.7916666666666" y="1428.0" />
+      <point x="0.0" y="1428.0" />
+      <point x="0.0" y="169.0" />
+      <point x="103.49939814814854" y="169.0" />
+      <point x="-70.0" y="25.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.main.Main" target="com.gray.lightcycles.client.main.Input">
+      <point x="59.90625" y="-125.0" />
+      <point x="875.28125" y="1103.0" />
+      <point x="1031.1779861111113" y="1103.0" />
+      <point x="-53.75" y="47.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.world.ClientTile" target="com.gray.lightcycles.client.Util.Util">
+      <point x="43.75" y="-48.5" />
+      <point x="408.12499999999994" y="169.0" />
+      <point x="484.9077314814818" y="169.0" />
+      <point x="-76.66666666666669" y="69.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.entity.ClientPlayer" target="com.gray.lightcycles.client.Util.Util">
+      <point x="109.58333333333337" y="-59.5" />
+      <point x="924.9583333333334" y="1428.0" />
+      <point x="1301.7613194444446" y="1428.0" />
+      <point x="1301.7613194444446" y="159.0" />
+      <point x="638.2410648148152" y="159.0" />
+      <point x="76.66666666666674" y="69.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.main.GameWindow" target="com.gray.lightcycles.client.main.GameThread">
+      <point x="60.0" y="-48.5" />
+      <point x="739.375" y="688.0" />
+      <point x="723.2613194444446" y="688.0" />
+      <point x="-61.66666666666663" y="70.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.main.Main" target="com.gray.lightcycles.client.render.ClientRenderer">
+      <point x="-86.53125" y="-125.0" />
+      <point x="728.84375" y="1123.0" />
+      <point x="119.74939814814854" y="1123.0" />
+      <point x="119.74939814814854" y="409.0" />
+      <point x="188.25" y="409.0" />
+      <point x="59.25" y="70.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.net.PacketHandler" target="com.gray.lightcycles.client.net.ClientNetwork">
+      <point x="52.33333333333326" y="37.0" />
+      <point x="1024.0653935185187" y="179.0" />
+      <point x="1053.4583333333335" y="179.0" />
+      <point x="47.250000000000114" y="-92.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.main.Main" target="com.gray.lightcycles.client.net.ClientNetwork">
+      <point x="46.59375" y="-125.0" />
+      <point x="861.96875" y="1093.0" />
+      <point x="966.9279861111113" y="1093.0" />
+      <point x="966.9279861111113" y="409.0" />
+      <point x="1006.2083333333333" y="409.0" />
+      <point x="0.0" y="92.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.main.Main" target="com.gray.lightcycles.client.entity.ClientPlayer">
+      <point x="79.875" y="125.0" />
+      <point x="895.25" y="1428.0" />
+      <point x="881.125" y="1428.0" />
+      <point x="65.75" y="-59.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.world.ClientTileMap" target="com.gray.lightcycles.client.world.ClientTile">
+      <point x="41.19999999999999" y="-114.5" />
+      <point x="405.57499999999993" y="409.0" />
+      <point x="422.7083333333333" y="409.0" />
+      <point x="58.33333333333337" y="48.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.main.GameWindow" target="com.gray.lightcycles.client.main.Main">
+      <point x="60.0" y="48.5" />
+      <point x="739.375" y="1073.0" />
+      <point x="795.40625" y="1073.0" />
+      <point x="-19.96875" y="-125.0" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.main.Main" target="com.gray.lightcycles.client.Util.Util">
+      <point x="-46.59375" y="-125.0" />
+      <point x="768.78125" y="1093.0" />
+      <point x="548.875" y="1093.0" />
+      <point x="548.875" y="179.0" />
+      <point x="546.2410648148151" y="179.0" />
+      <point x="-15.333333333333371" y="69.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.net.ClientNetwork" target="com.gray.lightcycles.client.net.PacketHandler">
+      <point x="-47.249999999999886" y="-92.5" />
+      <point x="958.9583333333334" y="179.0" />
+      <point x="971.7320601851854" y="179.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.net.ServerIOThread" target="com.gray.lightcycles.client.main.Main">
+      <point x="0.0" y="59.5" />
+      <point x="1180.7613194444446" y="688.0" />
+      <point x="1202.9279861111113" y="688.0" />
+      <point x="1202.9279861111113" y="1123.0" />
+      <point x="901.90625" y="1123.0" />
+      <point x="86.53125" y="-125.0" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.main.GameThread" target="com.gray.lightcycles.client.main.Main">
+      <point x="0.0" y="70.5" />
+      <point x="784.9279861111113" y="688.0" />
+      <point x="809.875" y="688.0" />
+      <point x="809.875" y="1133.0" />
+      <point x="808.71875" y="1133.0" />
+      <point x="-6.65625" y="-125.0" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.main.GameWindow" target="com.gray.lightcycles.client.Util.Util">
+      <point x="-60.0" y="-48.5" />
+      <point x="619.375" y="179.0" />
+      <point x="576.9077314814818" y="179.0" />
+      <point x="15.333333333333371" y="69.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.net.PacketHandler" target="com.gray.lightcycles.client.main.Main">
+      <point x="-52.33333333333337" y="37.0" />
+      <point x="919.398726851852" y="179.0" />
+      <point x="887.9279861111113" y="179.0" />
+      <point x="887.9279861111113" y="1073.0" />
+      <point x="835.34375" y="1073.0" />
+      <point x="19.96875" y="-125.0" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.main.Main" target="com.gray.lightcycles.client.net.ServerIOThread">
+      <point x="99.84375" y="-125.0" />
+      <point x="915.21875" y="1133.0" />
+      <point x="1242.6903935185187" y="1133.0" />
+      <point x="1242.6903935185187" y="688.0" />
+      <point x="1254.4279861111113" y="688.0" />
+      <point x="73.66666666666674" y="59.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.world.ClientTile" target="com.gray.lightcycles.client.render.Renderable">
+      <point x="-43.75" y="-48.5" />
+      <point x="320.62499999999994" y="169.0" />
+      <point x="243.49939814814854" y="169.0" />
+      <point x="70.0" y="25.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.render.ClientRenderer" target="com.gray.lightcycles.client.render.Renderable">
+      <point x="59.25" y="-70.5" />
+      <point x="188.25" y="179.0" />
+      <point x="173.49939814814854" y="179.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="com.gray.lightcycles.client.main.Main" target="com.gray.lightcycles.client.main.ClientGame">
+      <point x="-59.90625" y="-125.0" />
+      <point x="755.46875" y="1103.0" />
+      <point x="451.37499999999994" y="1103.0" />
+      <point x="87.0" y="170.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="262.08333333333326" y="965.0833333333335" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -5,6 +5,7 @@ import com.gray.lightcycles.logic.entity.Player;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Map;
 
 public class GameWindow extends JPanel
 {
@@ -24,17 +25,17 @@ public class GameWindow extends JPanel
 		super.paintComponent(g);
 		setBackground(Color.BLACK);
 		Graphics2D g2d = (Graphics2D) g;
-		g2d.setColor(Color.BLACK);
+		g2d.setColor(Color.RED);
 		g2d.drawString("FPS: " + GameThread.lastFPS, 0, 100);
 		g2d.translate((Util.WINDOW_WIDTH - (Util.TILE_SIZE * Util.BOARD_SIZE))/2, 0);
 
 		Main.renderer.draw(g);
 
-		g2d.setColor(Color.BLUE);
-
-		for(Player player : Main.game.getPlayers().values())
+		for(Map.Entry<String, Player> entry : Main.game.getPlayers().entrySet())
 		{
-			g2d.fillRect((int)player.getPos().getX() * Util.TILE_SIZE, (int)player.getPos().getY() * Util.TILE_SIZE, 2 * Util.TILE_SIZE, Util.TILE_SIZE);
+			int color = entry.getKey().getBytes()[0] + entry.getKey().length()*100;
+			g2d.setColor(new Color(color % 255));
+			g2d.fillRect((int)entry.getValue().getPos().getX() * Util.TILE_SIZE, (int)entry.getValue().getPos().getY() * Util.TILE_SIZE, 2 * Util.TILE_SIZE, Util.TILE_SIZE);
 		}
 
 

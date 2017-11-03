@@ -42,7 +42,7 @@ public class Main
 			getPlayer().setDir(Player.DIR_UP);
 		}
 
-		userName = "GRAYZ19281";
+		userName = "GRAYZ11145";
 		serverState = false;
 
 		renderer = new ClientRenderer();

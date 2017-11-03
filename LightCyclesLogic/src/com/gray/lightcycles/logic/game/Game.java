@@ -1,6 +1,8 @@
 package com.gray.lightcycles.logic.game;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 import com.gray.lightcycles.logic.entity.Player;
 import com.gray.lightcycles.logic.math.Vector2d;
@@ -23,7 +25,6 @@ public class Game
 	public synchronized void addPlayer(int x, int y, String name)
 	{
 		int dir = Player.DIR_RIGHT;
-		System.out.println(boardSize/2);
 		if(x < boardSize / 2)
 		{
 			dir = Player.DIR_LEFT;
@@ -53,19 +54,30 @@ public class Game
 
 	public synchronized void update(double delta)
 	{
-		for(Player player : players.values())
-		{
-			Vector2d lastPos = player.getPos();
-			player.update(delta);
-			checkDeath(player);
+		ArrayList<String> deadPlayers = new ArrayList<>();
 
-			if(!player.isDead())
+		for(Map.Entry<String, Player> entry : getPlayers().entrySet())
+		{
+			Vector2d lastPos = entry.getValue().getPos();
+			entry.getValue().update(delta);
+			checkDeath(entry.getValue());
+
+			if(!entry.getValue().isDead())
 			{
-				if(player.isLightWall())
+				if(entry.getValue().isLightWall())
 				{
 					setTile((int)Math.round(lastPos.getX()), (int)Math.round(lastPos.getY()));
 				}
 			}
+			else
+			{
+				deadPlayers.add(entry.getKey());
+			}
+		}
+
+		for(String name : deadPlayers)
+		{
+			players.remove(name);
 		}
 	}
 

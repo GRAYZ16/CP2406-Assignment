@@ -28,29 +28,28 @@ public class PacketHandler implements  Runnable
 				LightCyclesPacket playerPacket = new LightCyclesPacket(packet);
 
 				HashMap<String, Player> players = playerPacket.getPlayerData();
+				HashMap<String, Player> newPlayers = new HashMap<>();
 
 				for(Map.Entry<String, Player> entry : players.entrySet())
 				{
 
 					if(entry.getKey().equals(Main.userName))
 					{
-
 						Main.getPlayer().setPos(entry.getValue().getPos());
 					}
 					else
 					{
 						if(Main.game.getPlayer(entry.getKey()) == null)
 						{
-							Main.game.addPlayer(entry.getValue().getPos().getX(), entry.getValue().getPos().getY(), entry.getKey());
+							newPlayers.put(entry.getKey(), entry.getValue());
 						}
 						else
 						{
-							Main.game.setPlayerStatus(entry.getKey(), entry.getValue().getPos().getX(), entry.getValue().getPos().getY(), entry.getValue().isLightWall());
+							newPlayers.put(entry.getKey(), entry.getValue());
 						}
-
 					}
-
 				}
+				Main.game.setPlayers(newPlayers);
 			}
 			else
 			{

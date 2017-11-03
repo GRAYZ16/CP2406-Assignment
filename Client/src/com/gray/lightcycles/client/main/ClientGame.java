@@ -2,6 +2,7 @@ package com.gray.lightcycles.client.main;
 
 import java.awt.*;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 import com.gray.lightcycles.client.world.ClientTileMap;
@@ -40,7 +41,7 @@ public class ClientGame
 		}
 
 		players.put(name, new Player( new Vector2d(x, y), new Vector2d(VEL, VEL), dir));
-		colors.put(name, Color.YELLOW);
+		colors.put(name, new Color(random.nextInt(255)));
 	}
 
 	public synchronized HashMap<String, Player> getPlayers()
@@ -60,15 +61,15 @@ public class ClientGame
 
 	public synchronized void update(double delta)
 	{
-		for(Player player : players.values())
+		for(Map.Entry<String, Player> entry : players.entrySet())
 		{
-			Vector2d lastPos = player.getPos();
-			player.update(delta);
-			checkDeath(player);
+			Vector2d lastPos = entry.getValue().getPos();
+			entry.getValue().update(delta);
+			checkDeath(entry.getValue());
 
-			if(!player.isDead())
+			if(!entry.getValue().isDead())
 			{
-				setTile((int)Math.round(lastPos.getX()), (int)Math.round(lastPos.getY()), Color.YELLOW);
+				setTile((int)Math.round(lastPos.getX()), (int)Math.round(lastPos.getY()), colors.get(entry.getKey()));
 			}
 		}
 	}
@@ -93,6 +94,11 @@ public class ClientGame
 	public synchronized ClientTileMap getTiles()
 	{
 		return tiles;
+	}
+
+	public synchronized Color getColor(String name)
+	{
+		return colors.get(name);
 	}
 
 	public synchronized void setTile(int x, int y, Color color)

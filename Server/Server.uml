@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="339.5" y="56.0">com.gray.scores.Scoreboard</node>
+    <node x="0.0" y="0.0">com.gray.net.ClientThread</node>
+    <node x="55.0" y="258.0">com.gray.net.ReceiveThread</node>
+    <node x="358.0" y="235.0">com.gray.net.LogicThread</node>
+    <node x="128.20787545787545" y="392.0">com.gray.net.Server</node>
+    <node x="201.0" y="258.0">com.gray.net.BroadcastThread</node>
+    <node x="115.00000000000001" y="813.0">com.gray.main.Main</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.gray.net.Server" target="com.gray.net.LogicThread">
+      <point x="54.0" y="-180.5" />
+      <point x="276.70787545787545" y="362.0" />
+      <point x="386.0" y="362.0" />
+      <point x="-56.0" y="48.5" />
+    </edge>
+    <edge source="com.gray.net.BroadcastThread" target="com.gray.main.Main">
+      <point x="45.66666666666663" y="25.5" />
+      <point x="315.16666666666663" y="352.0" />
+      <point x="327.70787545787545" y="352.0" />
+      <point x="327.70787545787545" y="783.0" />
+      <point x="275.2857142857143" y="783.0" />
+      <point x="58.28571428571428" y="-81.0" />
+    </edge>
+    <edge source="com.gray.net.Server" target="com.gray.net.ReceiveThread">
+      <point x="-81.0" y="-180.5" />
+      <point x="141.70787545787545" y="372.0" />
+      <point x="117.5" y="372.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="com.gray.net.LogicThread" target="com.gray.scores.Scoreboard">
+      <point x="0.0" y="-48.5" />
+      <point x="0.0" y="36.5" />
+    </edge>
+    <edge source="com.gray.net.LogicThread" target="com.gray.net.Server">
+      <point x="0.0" y="48.5" />
+      <point x="442.0" y="372.0" />
+      <point x="303.70787545787545" y="372.0" />
+      <point x="81.0" y="-180.5" />
+    </edge>
+    <edge source="com.gray.net.ClientThread" target="com.gray.main.Main">
+      <point x="-78.33333333333334" y="92.5" />
+      <point x="39.16666666666666" y="210.0" />
+      <point x="44.49999999999997" y="210.0" />
+      <point x="44.49999999999997" y="793.0" />
+      <point x="129.57142857142856" y="793.0" />
+      <point x="-87.42857142857144" y="-81.0" />
+    </edge>
+    <edge source="com.gray.net.Server" target="com.gray.net.BroadcastThread">
+      <point x="0.0" y="-180.5" />
+      <point x="222.70787545787545" y="372.0" />
+      <point x="223.83333333333334" y="372.0" />
+      <point x="-45.66666666666666" y="25.5" />
+    </edge>
+    <edge source="com.gray.net.ReceiveThread" target="com.gray.net.ClientThread">
+      <point x="0.0" y="-25.5" />
+      <point x="-1.4210854715202004E-14" y="92.5" />
+    </edge>
+    <edge source="com.gray.net.LogicThread" target="com.gray.main.Main">
+      <point x="56.00000000000003" y="48.5" />
+      <point x="498.0" y="372.0" />
+      <point x="462.6703296703297" y="372.0" />
+      <point x="462.6703296703297" y="793.0" />
+      <point x="304.42857142857144" y="793.0" />
+      <point x="87.42857142857144" y="-81.0" />
+    </edge>
+    <edge source="com.gray.net.Server" target="com.gray.main.Main">
+      <point x="63.0" y="180.5" />
+      <point x="285.70787545787545" y="773.0" />
+      <point x="246.1428571428571" y="773.0" />
+      <point x="29.14285714285711" y="-81.0" />
+    </edge>
+    <edge source="com.gray.net.ClientThread" target="com.gray.net.Server">
+      <point x="78.33333333333331" y="92.5" />
+      <point x="195.83333333333331" y="210.0" />
+      <point x="190.5" y="210.0" />
+      <point x="190.5" y="372.0" />
+      <point x="195.70787545787545" y="372.0" />
+      <point x="-27.0" y="-180.5" />
+    </edge>
+    <edge source="com.gray.net.BroadcastThread" target="com.gray.net.Server">
+      <point x="0.0" y="25.5" />
+      <point x="269.5" y="372.0" />
+      <point x="249.70787545787545" y="372.0" />
+      <point x="27.0" y="-180.5" />
+    </edge>
+    <edge source="com.gray.net.ReceiveThread" target="com.gray.net.Server">
+      <point x="41.66666666666666" y="25.5" />
+      <point x="159.16666666666666" y="372.0" />
+      <point x="168.70787545787545" y="372.0" />
+      <point x="-54.0" y="-180.5" />
+    </edge>
+    <edge source="com.gray.main.Main" target="com.gray.net.Server">
+      <point x="-2.8421709430404007E-14" y="-81.0" />
+      <point x="217.0" y="793.0" />
+      <point x="222.70787545787545" y="793.0" />
+      <point x="0.0" y="180.5" />
+    </edge>
+    <edge source="com.gray.net.ReceiveThread" target="com.gray.main.Main">
+      <point x="-41.66666666666666" y="25.5" />
+      <point x="75.83333333333334" y="372.0" />
+      <point x="79.19505494505498" y="372.0" />
+      <point x="79.19505494505498" y="783.0" />
+      <point x="158.71428571428572" y="783.0" />
+      <point x="-58.285714285714306" y="-81.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.6" x="694.7142857142862" y="730.9999999999998" />
+  <SelectedNodes>
+    <node>com.gray.main.Main</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
